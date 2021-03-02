@@ -37,6 +37,15 @@ if (!empty($url[1])) {
 		case 'ueberuns':
 			build('ueberuns.php');
 			break;
+		case 'bewerbung':
+			build('bewerbung.php');
+			break;
+		case 'login':
+			build('login.php');
+			break;
+		case 'registration':
+			build('registration.php');
+			break;
 		default:
 			build('404.php');
 			break;
