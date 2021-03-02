@@ -17,7 +17,8 @@
                 </div>
             </div>
             <a href="galerie">Galerie</a>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="login">Login</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="hamburgerMenu()">&#9776;</a>
         </div>
         <div></div>
     </div>
