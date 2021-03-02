@@ -1,6 +1,6 @@
 <h1 id="header_h1">Hundevermittlung vereint</h1>
 <div class="fliesstext">
-    <h2>Registration</h2>
+    <h2>Registration 3</h2>
     <br>
     <form action="mailto:info@vermittlungvereint.ch" method="post" enctype="text/plain">
         <div class="grid-formular">
