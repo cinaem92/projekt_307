@@ -16,11 +16,15 @@ function build($page)
     <body>
         <header>
             <?php require_once 'header.php'; ?>
+            <script src="./js/script.js">
+                    window.onload = setActive;
+                </script>
         </header>
         <div class="container">
             <div></div>
             <main>
                 <?php require_once './views/' . $page; ?>
+
             </main>
             <div></div>
         </div>
@@ -29,6 +33,7 @@ function build($page)
         </footer>
 
     </html>
+
 <?php
 }
 ?>
