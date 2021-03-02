@@ -3,8 +3,9 @@
     </div>
     <div class="container blueBackground">
         <div></div>
-        <div class="topnav" id="myTopnav">
-            <a href="home" class="active">Home</a>
+        <div class="topnav" id="myTopnav" ;
+>
+            <a href="home">Home</a>
             <a href="aktuellehunde">Aktuelle Hunde</a>
             <a href="vermittlung">Vermittlung</a>
             <div class="dropdown">
