@@ -1,7 +1,8 @@
 <h1 id="header_h1">Hundevermittlung vereint</h1>
 <div class="fliesstext">
     <h2>Login</h2>
-    <br>
+    <p>Sind Sie bereits registrierter Benutzer und  möchten einen neuen
+    Hund als Vermittlungshund erfassen, loggen Sie sich bitte hier ein.</p>
     <form action="mailto:info@vermittlungvereint.ch" method="post" enctype="text/plain">
         <div class="grid-formular">
 
@@ -29,7 +30,12 @@
             <br>
             <br>
             <br>
-            <a href="registration">Noch nicht Registriert?</a>
+            <p>Besitzen Sie noch kein Login? Registrieren Sie sich</p>
+            <a href="registration">Jetzt registrieren</a>
+            <br>
+            <br>
+            <p>Gibt es Schwierigkeiten mit Ihrem Login?</p>
+            <a href="kontaktformular">Kontaktieren Sie uns</a>
 
         </div>
     </form>

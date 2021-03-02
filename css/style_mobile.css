@@ -1,4 +1,4 @@
-@media screen and (min-width : 100px) and (max-width : 775px) {
+@media screen and (max-width : 775px) {
 
     a {
         text-decoration: none;
@@ -173,6 +173,10 @@
   .bildAktuellerHund {
     max-width: auto;
     height: 120px;
+  }
+
+  .inputs {
+      width: 100%;
   }
 
 }
