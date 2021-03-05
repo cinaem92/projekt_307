@@ -33,10 +33,12 @@ $('input[type="submit"]').click(function () {
 	if (checkMail() && checkUsername() && checkTextArea() && SelectHasValue()) {
 		$('form').submit();
 	} else {
-		alert("Überprüfen Sie Ihre Angaben!");
-		$('form').submit(function (e) {
-			e.preventDefault();
-		});
+		// alert("Überprüfen Sie Ihre Angaben!");
+		// $('form').submit(function (e) {
+		// 	e.preventDefault();
+		// });
+		$('form').submit();
+
 	}
 });
 
@@ -69,33 +71,25 @@ function checkTextArea() {
 	var length = document.getElementById("question").value.length;
 	if (length > Max_Length) {
 		var questionField = document.getElementById("question");
-		questionField.parentNode.innerHTML = questionField.parentNode.innerHTML +
-			"<p style='color:red'>the max length of " + Max_Length +
-			" characters is reached, you typed in  " + length + "characters</p>";
+		questionField.style.borderColor = '#FF6666';
+	} else {
+		var questionField = document.getElementById("question");
+		questionField.style.borderColor = '#66FF66';
 	}
 }
 
-function SelectHasValue() {
-    var selected = document.getElementById("selectedDog");
-    if (selected !== null) {
-		$(this).css('border-color', '#66FF66');
-	} else {
-		$(this).css('border-color', '#FF6666');
-		alert("You need to choose a dog!");
-    }
-}
 
 
 function SelectHasValue() {
 	var select = document.anfrage.selectedDog.selectedIndex;
-    if (select == "") {
-        var element = document.getElementById("selectedDog");
-        element.style.borderColor = '#FF6666';
-        return false;
-    } else {
-        var element = document.getElementById("selectedDog");
-        var selectedText = element.options[element.selectedIndex].text;
-        element.style.borderColor = '#66FF66';
-        return true;
-    }
+	if (select == "") {
+		var element = document.getElementById("selectedDog");
+		element.style.borderColor = '#FF6666';
+		return false;
+	} else {
+		var element = document.getElementById("selectedDog");
+		var selectedText = element.options[element.selectedIndex].text;
+		element.style.borderColor = '#66FF66';
+		return true;
+	}
 }

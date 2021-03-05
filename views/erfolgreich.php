@@ -93,6 +93,4 @@ if(!empty($_SESSION)) {
     </div>
 <br>
 <br>
-    Sie haben unsere Start-Seite um <?php echo $_SESSION['zeit']; ?> das erste mal besucht.
-
 </div>

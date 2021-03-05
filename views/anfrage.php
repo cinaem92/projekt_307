@@ -53,4 +53,4 @@
     </form>
 </div>
 
-<script src="./js/validateAnfrage.js"></script>
+<script src="./js/validateContact.js"></script>

@@ -43,8 +43,8 @@ if (!empty($url[1])) {
 		case 'login':
 			build('login.php');
 			break;
-		case 'registration':
-			build('registration.php');
+		case 'registrierung':
+			build('registrierung.php');
 			break;
 		case 'anfrage':
 			build('anfrage.php');
@@ -52,8 +52,15 @@ if (!empty($url[1])) {
 		case 'erfolgreich':
 			build('erfolgreich.php');
 			break;
+		case 'validateRegister':
+			build('validateRegister.php');
+			break;
 		case 'validateLogin':
 			build('validateLogin.php');
+			break;
+		case 'hundNeu':
+			build('hundNeu.php');
+			break;
 		default:
 			build('404.php');
 			break;

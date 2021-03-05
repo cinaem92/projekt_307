@@ -11,7 +11,7 @@ if(isset($_SESSION['user'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['user_password'])) {
         $_SESSION['user'] = $user['user_id'];
-        die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
+        die('Login erfolgreich. Weiter zu <a href="hundNeu">Hund erfassen</a>');
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
