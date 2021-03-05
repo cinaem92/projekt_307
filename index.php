@@ -46,6 +46,14 @@ if (!empty($url[1])) {
 		case 'registration':
 			build('registration.php');
 			break;
+		case 'anfrage':
+			build('anfrage.php');
+			break;
+		case 'erfolgreich':
+			build('erfolgreich.php');
+			break;
+		case 'validateLogin':
+			build('validateLogin.php');
 		default:
 			build('404.php');
 			break;

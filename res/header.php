@@ -15,6 +15,7 @@
                     <a href="ueberuns">Über uns</a>
                     <a href="impressum">Impressum</a>
                     <a href="kontaktformular">Kontakt</a>
+                    <a href="anfrage">Anfrage</a>
                 </div>
             </div>
             <a href="galerie">Galerie</a>
