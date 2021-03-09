@@ -4,7 +4,7 @@
     <p>Sind Sie bereits registrierter Benutzer und möchten einen neuen
         Hund als Vermittlungshund erfassen, loggen Sie sich bitte hier ein.</p>
 </div>
-<form action="validatelogindata" method="post">
+<form action="validatelogindata" method="post" onchange="return validate()">
     <div class="grid-formular">
 
         <!--General Informations-->
@@ -62,3 +62,6 @@
         </div>
     </div>
 </div>
+
+
+<script src="./js/validateLogin.js"></script>
