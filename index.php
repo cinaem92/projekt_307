@@ -31,9 +31,6 @@ if (!empty($url[1])) {
 		case 'impressum':
 			build('impressum.php');
 			break;
-		case 'kontaktformular':
-			build('kontaktformular.php');
-			break;
 		case 'ueberuns':
 			build('ueberuns.php');
 			break;

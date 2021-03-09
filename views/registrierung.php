@@ -10,7 +10,7 @@
                 <label>Benutzername</label>
             </div>
             <div>
-                <input type="text" name="username" class="inputs" placeholder="" required>
+                <input type="text" name="username" id="username" class="inputs" placeholder="" required>
             </div>
             <div class="labels">
                 <label>Passwort</label>
@@ -28,13 +28,13 @@
                 <label>Vorname</label>
             </div>
             <div>
-                <input type="text" name="name" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="name" id="name" class="inputs" placeholder="" minlength="3">
             </div>
             <div class="labels">
                 <label>Name</label>
             </div>
             <div>
-                <input type="text" name="lastname" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="lastname" id="lastname" class="inputs" placeholder="" minlength="3">
             </div>
             <div class="labels">
                 <label>Adresse</label>
@@ -52,13 +52,13 @@
                 <label>Telefonnummer</label>
             </div>
             <div>
-                <input type="number" id="telephone" name="telephone" class="inputs" placeholder="" minlength="3">
+                <input type="number" name="telephone" id="telephone" class="inputs" placeholder="" minlength="3">
             </div>
             <div class="labels">
                 <label>E-Mail</label>
             </div>
             <div>
-                <input type="email" name="email" class="inputs" placeholder="" required>
+                <input type="email" name="email" id="email" class="inputs" placeholder="" required>
             </div>
             
             
