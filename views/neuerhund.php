@@ -64,7 +64,7 @@
             
             <!--Send-Button-->
             <div class="sendButton">
-                <input type="submit" value="Erstellen">
+                <input type="submit" value="Registrieren">
             </div>
 
         </div>

@@ -82,16 +82,29 @@ function checkPassword() {
 }
 
 //Input Username
-function checkUsername() {
+function checkName() {
 	var inputUsername = /^.{3,}$/;
-	var username = document.getElementById('username').value;
+	var username = document.getElementById('name').value;
 	if (inputUsername.test(username)) {
-		$('#username').css('border-color', '#66FF66');
+		$('#name').css('border-color', '#66FF66');
 	} else {
-		$('#username').css('border-color', '#FF6666');
+		$('#name').css('border-color', '#FF6666');
 		// alert("You have entered an invalid username!");
 	}
 }
+
+//Input Username
+function checkLastname() {
+	var inputUsername = /^.{3,}$/;
+	var username = document.getElementById('lastname').value;
+	if (inputUsername.test(username)) {
+		$('#lastname').css('border-color', '#66FF66');
+	} else {
+		$('#lastname').css('border-color', '#FF6666');
+		// alert("You have entered an invalid username!");
+	}
+}
+
 
 //Input Telephone
 function checkPhone() {

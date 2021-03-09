@@ -22,8 +22,8 @@ if (!empty($url[1])) {
 		case 'vermittlung':
 			build('vermittlung.php');
 			break;
-		case 'hundNeu':
-			build('hundNeu.php');
+		case 'neuerhund':
+			build('neuerhund.php');
 			break;
 		case 'ueberuns':
 			build('ueberuns.php');
