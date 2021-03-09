@@ -23,8 +23,10 @@ if (!empty($url[1])) {
 			build('vermittlung.php');
 			break;
 		case 'neuerhund':
-			build('neuerhund.php');
-			break;
+			// if(!empty($_SESSION['userdata']['login']) && $_SESSION['userdata']['login']) {
+				build('neuerhund.php');
+				break;
+			// }
 		case 'ueberuns':
 			build('ueberuns.php');
 			break;
