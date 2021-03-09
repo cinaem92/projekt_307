@@ -52,8 +52,8 @@ if (!empty($url[1])) {
 		case 'validateregdata':
 			build('validateRegData.php');
 			break;
-		case 'validateLogin':
-			build('validateLogin.php');
+		case 'validatelogindata':
+			build('validatelogindata.php');
 			break;
 		default:
 			build('404.php');

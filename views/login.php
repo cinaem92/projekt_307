@@ -22,7 +22,7 @@
     <h2>Login</h2>
     <p>Sind Sie bereits registrierter Benutzer und  möchten einen neuen
     Hund als Vermittlungshund erfassen, loggen Sie sich bitte hier ein.</p>
-    <form action="validateLogin" method="post" enctype="text/plain">
+    <form action="validatelogindata" method="post" enctype="text/plain">
         <div class="grid-formular">
 
             <!--General Informations-->
