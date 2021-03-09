@@ -15,10 +15,10 @@ function build($page)
         <script type="text/javascript" src="./js/script.js"></script>
         <script src='./js/jquery-3.5.1.min.js'></script>
 
-
         <?php
         require_once './sql/database.php';
         ?>
+        
     </head>
 
     <body>
