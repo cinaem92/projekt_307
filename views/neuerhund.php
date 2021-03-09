@@ -2,7 +2,7 @@
 <div class="fliesstext">
     <h2>Geben Sie hier die Daten ein</h2>
     <br>
-    <form action="#" method="post" onchange="#">
+    <form action="#" method="post" onchange="">
         <div class="grid-formular">
 
             <!--General Informations-->
@@ -64,7 +64,7 @@
             
             <!--Send-Button-->
             <div class="sendButton">
-                <input type="submit" value="Registrieren">
+                <input type="submit" value="Erstellen">
             </div>
 
         </div>

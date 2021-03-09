@@ -11,6 +11,8 @@
                 <div class="dropdown-content">
                 <a href="aktuellehunde">Aktuelle Hunde</a>
                     <a href="vermittlung">Vermittlung</a>
+                    <a href="hundNeu">Neuen Hund erfassen</a>
+
                 </div>
             </div>
             <div class="dropdown">

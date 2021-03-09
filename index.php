@@ -22,6 +22,9 @@ if (!empty($url[1])) {
 		case 'vermittlung':
 			build('vermittlung.php');
 			break;
+		case 'hundNeu':
+			build('hundNeu.php');
+			break;
 		case 'ueberuns':
 			build('ueberuns.php');
 			break;
@@ -30,9 +33,6 @@ if (!empty($url[1])) {
 			break;
 		case 'impressum':
 			build('impressum.php');
-			break;
-		case 'ueberuns':
-			build('ueberuns.php');
 			break;
 		case 'bewerbung':
 			build('bewerbung.php');
@@ -54,9 +54,6 @@ if (!empty($url[1])) {
 			break;
 		case 'validateLogin':
 			build('validateLogin.php');
-			break;
-		case 'hundNeu':
-			build('hundNeu.php');
 			break;
 		default:
 			build('404.php');

@@ -53,7 +53,7 @@ function validate() {
 }
 
 
-//Input Text
+//Input Username
 function checkUsername() {
 	var inputUsername = /^.{3,}$/;
 	var username = document.getElementById('username').value;
@@ -65,13 +65,11 @@ function checkUsername() {
 	}
 }
 
-
-//Input Text
+//Input Password
 function checkPassword() {
-	var inputPassword = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/;
+	var inputPassword = /^[a-zA-Z]\w{3,14}$/;
 	var password = document.getElementById('password').value;
 	var passwordRepeat = password = document.getElementById('passwordRepeat').value;
-	console.log(password);
 
 	if (inputPassword.test(password) && inputPassword.test(passwordRepeat)) {
 		$('#password').css('border-color', '#66FF66');
@@ -83,6 +81,30 @@ function checkPassword() {
 	}
 }
 
+//Input Username
+function checkUsername() {
+	var inputUsername = /^.{3,}$/;
+	var username = document.getElementById('username').value;
+	if (inputUsername.test(username)) {
+		$('#username').css('border-color', '#66FF66');
+	} else {
+		$('#username').css('border-color', '#FF6666');
+		// alert("You have entered an invalid username!");
+	}
+}
+
+//Input Telephone
+function checkPhone() {
+	var inputPhone = /^\+[0-9]{11}$/;
+	var tel = document.getElementById('telephone').value;
+
+	if (inputPhone.test(tel)) {
+		$('#telephone').css('border-color', '#66FF66');
+	} else {
+		$('#telephone').css('border-color', '#FF6666');
+		// alert("You have entered an invalid username!");
+	}
+}
 
 //Input E-Mail
 function checkMail() {
@@ -96,16 +118,3 @@ function checkMail() {
 	}
 }
 
-
-//Input Text
-function checkPhone() {
-	var inputPhone = /^\+[0-9]{11}$/;
-	var tel = document.getElementById('telephone').value;
-
-	if (inputPhone.test(tel)) {
-		$('#telephone').css('border-color', '#66FF66');
-	} else {
-		$('#telephone').css('border-color', '#FF6666');
-		// alert("You have entered an invalid username!");
-	}
-}
