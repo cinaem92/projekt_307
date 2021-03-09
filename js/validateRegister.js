@@ -1,66 +1,16 @@
-//Email Validierungs-Skript
-
-// $('input[type="text"').on('input', function () {
-// 	var textPattern = /^.{3,}$/;
-// 	if (textPattern.test($(this).val())) {
-// 		$(this).css('border-color', '#66FF66')
-// 	} else {
-// 		$(this).css('border-color', '#FF6666');
-// 	}
-// });
-
-// $('input[type="email"').on('input', function () {
-// 	var mailPattern = /^(\w+|\w+[\.\-]\w+)@(\w+|\w+[\.\-]\w+)\.\w{2,}$/;
-// 	if (mailPattern.test($(this).val())) {
-// 		$(this).css('border-color', '#66FF66')
-// 	} else {
-// 		$(this).css('border-color', '#FF6666');
-// 	}
-// });
-
-$('textarea').click(function () {
-	var Max_Length = 20;
-	var length = document.getElementById("question").value.length;
-	if (length < Max_Length) {
-		$(this).css('border-color', '#66FF66')
-	} else {
-		$(this).css('border-color', '#FF6666');
-	}
-
-});
-
-// $('input[type="submit"]').click(function () {
-// 	if (checkUsername() && checkPassword() && checkMail() && SelectHasValue() && checkPhone()) {
-// 		$('form').submit();
-// 	} else {
-// 		// alert("Überprüfen Sie Ihre Angaben!");
-// 		// $('form').submit(function (e) {
-// 		// 	e.preventDefault();
-// 		// });
-// 		$('form').submit();
-
-// 	}
-// });
-
-
 //JavaScript Input-Validierung
 function validate() {
 	checkUsername();
 	checkPassword();
 	checkName();
 	checkLastname();
+	checkAddress();
+	checkPlz();
+	checkCity();
 	checkMail();
 	checkPhone();
 }
 
-// //Formular übermitteln
-// $('form').submit(function () {
-// 	if (checkUsername()) {
-// 		return true;
-// 	}
-// 	return false;
-
-// }​​​​);
 
 //Input Username
 function checkUsername() {
@@ -79,26 +29,19 @@ function checkUsername() {
 //Input Password
 function checkPassword() {
 	var inputPassword = /^[a-zA-Z]\w{3,14}$/;
+	//REGEX muss noch eingebaut werden
 	var password = document.getElementById('password').value;
-	var passwordRepeat = password = document.getElementById('passwordRepeat').value;
-
-	if (password == passwordRepeat) {
-
-		if (inputPassword.test(password) && inputPassword.test(passwordRepeat)) {
-			$('#password').css('border-color', '#66FF66');
-			$('#passwordRepeat').css('border-color', '#66FF66');
-
-		} else {
-			$('#password').css('border-color', '#FF6666');
-			$('#passwordRepeat').css('border-color', '#FF6666');
-		}
-	} else {
+	var passwordRepeat = document.getElementById('passwordRepeat').value;
+	if (password != passwordRepeat) {
 		$('#password').css('border-color', '#FF6666');
 		$('#passwordRepeat').css('border-color', '#FF6666');
+	} else {
+		$('#password').css('border-color', '#66FF66');
+		$('#passwordRepeat').css('border-color', '#66FF66');
 	}
 }
 
-//Input Username
+//Input Name
 function checkName() {
 	var inputName = /^.{3,}$/;
 	var name = document.getElementById('name').value;
@@ -110,7 +53,7 @@ function checkName() {
 	}
 }
 
-//Input Username
+//Input Lastname
 function checkLastname() {
 	var inputLastname = /^.{3,}$/;
 	var lastname = document.getElementById('lastname').value;
@@ -123,37 +66,37 @@ function checkLastname() {
 }
 
 //Input Address
-function checkLastname() {
-	var inputLastname = /^.{3,}$/;
-	var lastname = document.getElementById('lastname').value;
-	if (inputLastname.test(lastname)) {
-		$('#lastname').css('border-color', '#66FF66');
+function checkAddress() {
+	var inputAdress = /^.{3,}$/;
+	var address = document.getElementById('address').value;
+	if (inputAdress.test(address)) {
+		$('#address').css('border-color', '#66FF66');
 	} else {
-		$('#lastname').css('border-color', '#FF6666');
+		$('#address').css('border-color', '#FF6666');
 		// alert("You have entered an invalid username!");
 	}
 }
 
 //Input PLZ
-function checkLastname() {
-	var inputLastname = /^.{3,}$/;
-	var lastname = document.getElementById('lastname').value;
-	if (inputLastname.test(lastname)) {
-		$('#lastname').css('border-color', '#66FF66');
+function checkPlz() {
+	var inputPlz = /^[0-9]{4}$/;
+	var plz = document.getElementById('plz').value;
+	if (inputPlz.test(plz)) {
+		$('#plz').css('border-color', '#66FF66');
 	} else {
-		$('#lastname').css('border-color', '#FF6666');
+		$('#plz').css('border-color', '#FF6666');
 		// alert("You have entered an invalid username!");
 	}
 }
 
-//Input Ort
-function checkLastname() {
-	var inputLastname = /^.{3,}$/;
-	var lastname = document.getElementById('lastname').value;
-	if (inputLastname.test(lastname)) {
-		$('#lastname').css('border-color', '#66FF66');
+//Input City
+function checkCity() {
+	var inputCity = /^.{3,}$/;
+	var city = document.getElementById('city').value;
+	if (inputCity.test(city)) {
+		$('#city').css('border-color', '#66FF66');
 	} else {
-		$('#lastname').css('border-color', '#FF6666');
+		$('#city').css('border-color', '#FF6666');
 		// alert("You have entered an invalid username!");
 	}
 }
@@ -171,6 +114,7 @@ function checkPhone() {
 		// alert("You have entered an invalid username!");
 	}
 }
+
 
 //Input E-Mail
 function checkMail() {

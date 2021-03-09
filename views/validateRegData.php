@@ -57,26 +57,13 @@
             $_SESSION['data'] = $data;
             //daten in die Datenbank abspitzen
         }
-
-        // $username = $_POST['username'];
-        // $password = $_POST['password'];
-        // $name = $_POST['name'];
-        // $lastname = $_POST['lastname'];
-        // $address = $_POST['address'];
-        // $plz = $_POST['plz'];
-        // $telephone = $_POST['telephone'];
-        // $email = $_POST['email'];
         
-        // $statement = $pdo->prepare("SELECT * FROM user WHERE user_username == username");
-        // $result = $statement->execute(array('username' => $username));
-        // $user = $statement->fetch();
     } else {
         echo "Das Formular wurde nicht korrekt ausgefüllt!";
     }
 
-    //Überprüfung der Daten
-    //Speichern der Session???
-    //Evtl. Daten von erfolgreich.php übernehmen
 
+
+    //Speichern der Session
 
 ?>

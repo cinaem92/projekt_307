@@ -46,21 +46,27 @@
                 <label>Adresse</label>
             </div>
             <div>
-                <input type="text" name="address" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="address" id="address" class="inputs" placeholder="" minlength="3">
             </div>
             <!--PLZ / Ort-->
             <div class="labels">
-                <label>PLZ / Ort</label>
+                <label>PLZ</label>
             </div>
             <div>
-                <input type="text" name="city" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="plz" id="plz" class="inputs" placeholder="" minlength="4" maxlength="4">
+            </div>
+            <div class="labels">
+                <label>Ort</label>
+            </div>
+            <div>
+                <input type="text" name="city" id="city" class="inputs" placeholder="" minlength="3">
             </div>
             <!--Telefonnummer-->
             <div class="labels">
                 <label>Telefonnummer</label>
             </div>
             <div>
-                <input type="number" name="telephone" id="telephone" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="telephone" id="telephone" class="inputs" placeholder="" minlength="3">
             </div>
             <!--E-Mail-->
             <div class="labels">
