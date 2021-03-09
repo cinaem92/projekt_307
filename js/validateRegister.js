@@ -45,6 +45,13 @@ $('input[type="submit"]').click(function () {
 
 //JavaScript Input-Validierung
 
+function validate() {
+	checkUsername();
+	checkMail();
+	checkPhone();
+}
+
+
 //Input Text
 function checkUsername() {
 	var inputText = /^.{3,}$/;
@@ -57,21 +64,21 @@ function checkUsername() {
 }
 
 //Input Passwort
-function checkPassword() {
-	var inputPassword = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/;
-	var password = document.getElementById("password");
-	// if (inputPassword.test($('input[type="password"]').val())) {
-	// 	$(this).css('border-color', '#66FF66');
-	// } else {
-	// 	$(this).css('border-color', '#FF6666');
-	// alert("You have entered an invalid username!");
+// function checkPassword() {
+// 	var inputPassword = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/;
+// 	var password = document.getElementById("password");
+// 	// if (inputPassword.test($('input[type="password"]').val())) {
+// 	// 	$(this).css('border-color', '#66FF66');
+// 	// } else {
+// 	// 	$(this).css('border-color', '#FF6666');
+// 	// alert("You have entered an invalid username!");
 
-	if (password.match(inputPassword)) {
-		$(this).css('border-color', '#66FF66');
-	} else {
-		$(this).css('border-color', '#FF6666');
-	}
-}
+// 	if (password.match(inputPassword)) {
+// 		$(this).css('border-color', '#66FF66');
+// 	} else {
+// 		$(this).css('border-color', '#FF6666');
+// 	}
+// }
 
 //Input E-Mail
 function checkMail() {
@@ -87,12 +94,14 @@ function checkMail() {
 
 //Input Text
 function checkPhone() {
-	var inputPhone = /^[0-9]*$/;
+	var inputPhone = /^\+[0-9]{11}$/;
 	var tel = document.getElementById("telephone").value;
-	if (tel.match('inputPhone').val()) {
-		$(this).css('border-color', '#66FF66');
+	console.log(tel);
+
+	if (inputPhone.test(tel)) {
+		$('#telephone').css('border-color', '#66FF66');
 	} else {
-		$(this).css('border-color', '#FF6666');
+		$('#telephone').css('border-color', '#FF6666');
 		// alert("You have entered an invalid username!");
 	}
 }

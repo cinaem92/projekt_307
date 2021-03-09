@@ -2,7 +2,7 @@
 <div class="fliesstext">
     <h2>Registrierung</h2>
     <br>
-    <form action="validateRegister" method="post" onchange="return checkUsername()">
+    <form action="validateRegister" method="post" onchange="return validate()">
         <div class="grid-formular">
 
             <!--General Informations-->
@@ -52,7 +52,7 @@
                 <label>Telefonnummer</label>
             </div>
             <div>
-                <input type="text" name="telephone" class="inputs" placeholder="" minlength="3">
+                <input type="number" id="telephone" name="telephone" class="inputs" placeholder="" minlength="3">
             </div>
             <div class="labels">
                 <label>E-Mail</label>
