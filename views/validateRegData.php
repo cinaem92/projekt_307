@@ -7,18 +7,37 @@
 
         $data = $_POST;
         $isValid = true;
+
+        var_dump($data);
+
     
-
-
-    
-
+        // Vorname überprüfen
         if (strlen($data['name']) < 3){
             echo "Der Vorname ist zu Kurz";
             $isValid = false;
         }
 
+        // Nachname überprüfen
         if (strlen($data['lastname']) < 3){
             echo "Der Nachname ist zu Kurz";
+            $isValid = false;
+        }
+
+        // Adresse überprüfen
+        if (strlen($data['address']) < 3){
+            echo "Die Adresse ist zu Kurz";
+            $isValid = false;
+        }
+
+        // Stadt überprüfen
+        if (strlen($data['city']) < 3){
+            echo "Der Name der Stadt ist zu Kurz";
+            $isValid = false;
+        }
+
+        // Telefonnummer überprüfen
+        if (strlen($data['telephone']) < 3){
+            echo "Die Telefonnummer ist zu Kurz";
             $isValid = false;
         }
 
@@ -28,8 +47,16 @@
             $isValid = false;
         }
 
-        
+        // Passwörter vergleichen
+        if (strcmp($data['password'], $data['passwordRepeat'])){
+            echo "Passwörter waren nicht gleich!";
+            $isValid = false;
+        }
 
+        if($isValid){
+            $_SESSION['data'] = $data;
+            //daten in die Datenbank abspitzen
+        }
 
         // $username = $_POST['username'];
         // $password = $_POST['password'];
@@ -43,6 +70,8 @@
         // $statement = $pdo->prepare("SELECT * FROM user WHERE user_username == username");
         // $result = $statement->execute(array('username' => $username));
         // $user = $statement->fetch();
+    } else {
+        echo "Das Formular wurde nicht korrekt ausgefüllt!";
     }
 
     //Überprüfung der Daten
