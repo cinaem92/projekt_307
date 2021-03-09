@@ -2,7 +2,7 @@
 <div class="fliesstext">
     <h2>Registrierung</h2>
     <br>
-    <form action="validateRegister" method="post" onchange="return validate()">
+    <form action="validateregdata" method="post" onchange="return validate()">
         <div class="grid-formular">
 
             <!--General Informations-->
