@@ -1,4 +1,6 @@
 <?php
+header('Location: home');
+exit;
 
 if(isset($_SESSION['user'])) {
     $username = $_POST['username'];
@@ -18,5 +20,7 @@ if(isset($_SESSION['user'])) {
     //Überprüfung der Daten
     //Speichern der Session???
     //Evtl. Daten von erfolgreich.php übernehmen
+
+    header('Location: home');
 
 ?>
