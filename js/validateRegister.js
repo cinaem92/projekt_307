@@ -29,29 +29,38 @@ $('textarea').click(function () {
 
 });
 
-$('input[type="submit"]').click(function () {
-	if (checkUsername() && checkPassword() && checkMail() && SelectHasValue() && checkPhone()) {
-		$('form').submit();
-	} else {
-		// alert("Überprüfen Sie Ihre Angaben!");
-		// $('form').submit(function (e) {
-		// 	e.preventDefault();
-		// });
-		$('form').submit();
+// $('input[type="submit"]').click(function () {
+// 	if (checkUsername() && checkPassword() && checkMail() && SelectHasValue() && checkPhone()) {
+// 		$('form').submit();
+// 	} else {
+// 		// alert("Überprüfen Sie Ihre Angaben!");
+// 		// $('form').submit(function (e) {
+// 		// 	e.preventDefault();
+// 		// });
+// 		$('form').submit();
 
-	}
-});
+// 	}
+// });
 
 
 //JavaScript Input-Validierung
-
 function validate() {
 	checkUsername();
 	checkPassword();
+	checkName();
+	checkLastname();
 	checkMail();
 	checkPhone();
 }
 
+// //Formular übermitteln
+// $('form').submit(function () {
+// 	if (checkUsername()) {
+// 		return true;
+// 	}
+// 	return false;
+
+// }​​​​);
 
 //Input Username
 function checkUsername() {
@@ -59,9 +68,11 @@ function checkUsername() {
 	var username = document.getElementById('username').value;
 	if (inputUsername.test(username)) {
 		$('#username').css('border-color', '#66FF66');
+		return true;
 	} else {
 		$('#username').css('border-color', '#FF6666');
 		// alert("You have entered an invalid username!");
+		return false;
 	}
 }
 
@@ -71,10 +82,16 @@ function checkPassword() {
 	var password = document.getElementById('password').value;
 	var passwordRepeat = password = document.getElementById('passwordRepeat').value;
 
-	if (inputPassword.test(password) && inputPassword.test(passwordRepeat)) {
-		$('#password').css('border-color', '#66FF66');
-		$('#passwordRepeat').css('border-color', '#66FF66');
+	if (password == passwordRepeat) {
 
+		if (inputPassword.test(password) && inputPassword.test(passwordRepeat)) {
+			$('#password').css('border-color', '#66FF66');
+			$('#passwordRepeat').css('border-color', '#66FF66');
+
+		} else {
+			$('#password').css('border-color', '#FF6666');
+			$('#passwordRepeat').css('border-color', '#FF6666');
+		}
 	} else {
 		$('#password').css('border-color', '#FF6666');
 		$('#passwordRepeat').css('border-color', '#FF6666');
@@ -83,9 +100,9 @@ function checkPassword() {
 
 //Input Username
 function checkName() {
-	var inputUsername = /^.{3,}$/;
-	var username = document.getElementById('name').value;
-	if (inputUsername.test(username)) {
+	var inputName = /^.{3,}$/;
+	var name = document.getElementById('name').value;
+	if (inputName.test(name)) {
 		$('#name').css('border-color', '#66FF66');
 	} else {
 		$('#name').css('border-color', '#FF6666');
@@ -95,9 +112,45 @@ function checkName() {
 
 //Input Username
 function checkLastname() {
-	var inputUsername = /^.{3,}$/;
-	var username = document.getElementById('lastname').value;
-	if (inputUsername.test(username)) {
+	var inputLastname = /^.{3,}$/;
+	var lastname = document.getElementById('lastname').value;
+	if (inputLastname.test(lastname)) {
+		$('#lastname').css('border-color', '#66FF66');
+	} else {
+		$('#lastname').css('border-color', '#FF6666');
+		// alert("You have entered an invalid username!");
+	}
+}
+
+//Input Address
+function checkLastname() {
+	var inputLastname = /^.{3,}$/;
+	var lastname = document.getElementById('lastname').value;
+	if (inputLastname.test(lastname)) {
+		$('#lastname').css('border-color', '#66FF66');
+	} else {
+		$('#lastname').css('border-color', '#FF6666');
+		// alert("You have entered an invalid username!");
+	}
+}
+
+//Input PLZ
+function checkLastname() {
+	var inputLastname = /^.{3,}$/;
+	var lastname = document.getElementById('lastname').value;
+	if (inputLastname.test(lastname)) {
+		$('#lastname').css('border-color', '#66FF66');
+	} else {
+		$('#lastname').css('border-color', '#FF6666');
+		// alert("You have entered an invalid username!");
+	}
+}
+
+//Input Ort
+function checkLastname() {
+	var inputLastname = /^.{3,}$/;
+	var lastname = document.getElementById('lastname').value;
+	if (inputLastname.test(lastname)) {
 		$('#lastname').css('border-color', '#66FF66');
 	} else {
 		$('#lastname').css('border-color', '#FF6666');
@@ -130,4 +183,3 @@ function checkMail() {
 		// alert("You have entered an invalid email address!");
 	}
 }
-
