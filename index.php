@@ -1,5 +1,6 @@
 <!-- Builder einbinden -->
 <?php
+session_start();
 include_once './res/builder.php';
 ?>
 
@@ -23,10 +24,14 @@ if (!empty($url[1])) {
 			build('vermittlung.php');
 			break;
 		case 'neuerhund':
-			// if(!empty($_SESSION['userdata']['login']) && $_SESSION['userdata']['login']) {
+			if(!empty($_SESSION['userdata'])) {
+				var_dump($_SESSION['userdata']);
 			build('neuerhund.php');
 			break;
-			// }
+			} else {
+				build('404.php');
+				break;
+			}
 		case 'ueberuns':
 			build('ueberuns.php');
 			break;

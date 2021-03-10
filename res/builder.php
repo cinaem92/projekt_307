@@ -1,6 +1,6 @@
 <?php
 function build($page) {
-    session_start();
+    
     ?>
 
         <!DOCTYPE html>

@@ -19,7 +19,7 @@ while($statement->fetch()){
 }
 
 if(!empty($user)){
-    $_SESSION['userdata'] = array('user_id' => $user['user_id'], 'username' => $user['user_username'], 'login' => true );
+    $_SESSION['userdata'] = array('user_id' => $user['user_id'], 'username' => $user['user_username'] );
     
     
     header("Location: loginuebersicht");
