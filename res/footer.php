@@ -9,14 +9,14 @@
         </div>
 
         <div class="ueberUnsFooter">
-            <p><a href="ueberuns.html">Über uns</a> <br>
-                <a href="kontaktformular.html">Kontakt</a> <br>
+            <p><a href="ueberuns">Über uns</a> <br>
+                <a href="anfrage">Kontakt</a> <br>
             </p>
         </div>
 
         <div class="informationenFooter">
-            <p> <a href="impressum.html">Impressum</a> <br>
-                <a href="galerie.html">Galerie</a>
+            <p> <a href="impressum">Impressum</a> <br>
+                <a href="galerie">Galerie</a>
             </p>
         </div>
     </footer>
