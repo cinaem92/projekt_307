@@ -12,7 +12,7 @@
         3030 Bern
     </p>
     <br>
-    <p><a class="kontakt" href="kontaktformular.html">Kontaktieren Sie uns!</a></p>
+    <p><a class="kontakt" href="anfrage">Kontaktieren Sie uns!</a></p>
     <br>
     <br>
     <div class="quellennachweis">

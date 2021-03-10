@@ -57,6 +57,9 @@ if (!empty($url[1])) {
 		case 'validatelogindata':
 			build('validatelogindata.php');
 			break;
+		case 'impressum':
+			build('impressum.php');
+			break;
 		default:
 			build('404.php');
 			break;
