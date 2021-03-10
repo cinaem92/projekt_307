@@ -56,6 +56,25 @@
         if($isValid){
             $_SESSION['data'] = $data;
             //daten in die Datenbank abspitzen
+            $db = new mysqli("localhost:3306", "test", "Welcome$21", "projekt_307");
+
+
+            $userQuery = $db->prepare("INSERT INTO user ('user_name', 'user_lastname', 'user_username', 'user_password', 'user_address', 'user_email', 'user_telephone')
+            VALUES (?,?,?,?,?,?,?)");
+
+            $userQuery->bind_param("sssssss",
+            $_SESSION['data']['name'], $_SESSION['data']['lastname'], $_SESSION['data']['username'], 
+            $_SESSION['data']['password'], $_SESSION['data']['address'], $_SESSION['data']['email'], 
+            $_SESSION['data']['telephone']);
+            
+            if ($userQuery->execute()){
+                header('neuerhund');
+                exit;
+            }
+
+            
+
+
         }
         
     } else {
