@@ -24,8 +24,8 @@ if (!empty($url[1])) {
 			break;
 		case 'neuerhund':
 			// if(!empty($_SESSION['userdata']['login']) && $_SESSION['userdata']['login']) {
-				build('neuerhund.php');
-				break;
+			build('neuerhund.php');
+			break;
 			// }
 		case 'ueberuns':
 			build('ueberuns.php');
@@ -41,6 +41,9 @@ if (!empty($url[1])) {
 			break;
 		case 'login':
 			build('login.php');
+			break;
+		case 'loginuebersicht':
+			build('loginuebersicht.php');
 			break;
 		case 'registrierung':
 			build('registrierung.php');
