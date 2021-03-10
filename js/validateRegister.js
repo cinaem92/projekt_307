@@ -32,7 +32,8 @@ function checkPassword() {
 	//REGEX muss noch eingebaut werden
 	var password = document.getElementById('password').value;
 	var passwordRepeat = document.getElementById('passwordRepeat').value;
-	if (password != passwordRepeat) {
+	// if (password != passwordRepeat) {
+	if (password != passwordRepeat && (!inputPassword.test(password)) && (!inputPassword.test(passwordRepeat))) {
 		$('#password').css('border-color', '#FF6666');
 		$('#passwordRepeat').css('border-color', '#FF6666');
 	} else {
