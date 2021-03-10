@@ -7,12 +7,12 @@
 
 <div class="row">
     <div class="col">
-        <button class="btn btn-newDog"><a href="registration">Jetzt registrieren</a></button>
+        <a href="registration" class="btn btn-newDog">Jetzt registrieren</a>
     </div>
     <div class="col">
-        <p><a href="registration">Jetzt registrieren</a></p>
+        <a href="registration" class="btn btn-newDog">Jetzt registrieren</a>
     </div>
     <div class="col">
-        <p><a href="registration">Jetzt registrieren</a></p>
+        <a href="registration" class="btn btn-newDog">Jetzt registrieren</a>
     </div>
 </div>

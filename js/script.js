@@ -8,6 +8,7 @@ function hamburgerMenu() {
   }
 }
 
+//Mobile-Navigation einblenden
 function setNavActive() {
   aObj = document.getElementsByClassName('topnav')[0].getElementsByTagName('a');
   for (i = 0; i < aObj.length; i++) {

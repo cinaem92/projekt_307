@@ -336,3 +336,8 @@
     object-fit: cover;
     margin-bottom: 20px;
   }
+
+
+  .btn-newDog {
+    background-color: #5D7A8C;
+  }

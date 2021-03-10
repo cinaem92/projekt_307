@@ -328,7 +328,6 @@ button::-moz-focus-inner,
 .btn {
   display: inline-block;
   font-weight: 400;
-  background-color: #5D7A8C;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
