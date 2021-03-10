@@ -43,25 +43,22 @@
 
 
 <div class="row">
-    <div class="col-mt-5">
+    <div class="col-6">
         <p>Besitzen Sie noch kein Login? Registrieren Sie sich</p>
     </div>
-    <div class="row">
-        <div class="col-mt-5">
-            <a href="registration">Jetzt registrieren</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-mt-5">
-            <p>Gibt es Schwierigkeiten mit Ihrem Login?</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-mt-5">
-            <a href="kontaktformular">Kontaktieren Sie uns</a>
-        </div>
+    <div class="col">
+        <p><a href="registration">Jetzt registrieren</a></p>
     </div>
 </div>
+<div class="row">
+    <div class="col-6">
+        <p>Gibt es Schwierigkeiten mit Ihrem Login?</p>
+    </div>
+    <div class="col">
+        <p><a href="kontaktformular">Kontaktieren Sie uns</a></p>
+    </div>
+</div>
+
 
 
 <script src="./js/validateLogin.js"></script>
