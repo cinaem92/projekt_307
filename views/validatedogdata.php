@@ -25,7 +25,7 @@ if (!empty($_POST)) {
 
     // PLZ überprüfen
     if (strlen($data['plz']) < 3) {
-        echo "Der Name der Stadt ist zu Kurz";
+        echo "Die PLZ ist zu Kurz";
         $isValid = false;
     }
 
