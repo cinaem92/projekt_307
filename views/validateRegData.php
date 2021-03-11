@@ -77,22 +77,19 @@
 
             $userQuery->execute();
 
-            // $userQuery = $db->prepare("INSERT INTO city (city_name, city_PLZ) VALUES (?,?)");
-            // $userQuery->bind_param("ss", $_SESSION['data']['city'], $_SESSION['data']['plz']);
-            // $userQuery->execute();
-
-            header("Location: login");
-            exit;
-
             
-            // Daten werden erst jetzt in die DB eingefügt
-            // if ($userQuery->execute()){
-            //     // Falls die Datentransplation erfolgreich war, wird auf die Seite LOGIN weitergeleitet
-            //     header("Location: login");
-            //     exit;
-            // }
+            $cityQuery = $db->prepare("INSERT INTO city (city_name, city_PLZ)
+            VALUES (?,?)");
+            $cityQuery->bind_param("si", $_SESSION['data']['city'], $_SESSION['data']['plz']);
+            $cityQuery->execute();
 
             $db->close();
+
+            //header("Location: login");
+            exit;
+
+
+            
         }
 
         

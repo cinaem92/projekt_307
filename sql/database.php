@@ -1,7 +1,7 @@
 <?php
     function getDatabase() {
-        // $conn = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
-        $conn = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
+        $conn = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
+        //$conn = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
         return $conn;
     }
 
