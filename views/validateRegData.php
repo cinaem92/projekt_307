@@ -59,6 +59,7 @@
 
         if($isValid){
             $_SESSION['data'] = $data;
+            
             //daten in die Datenbank abspitzen
             $db = getDatabase();
             
@@ -108,7 +109,7 @@
             $db->close();
 
             //header("Location: login");
-            
+           
 
             
         }

@@ -4,7 +4,7 @@ function build($page)
 ?>
 
     <!DOCTYPE html>
-    <html>
+    <html lang="de">
 
     <head>
         <title>Vermittlung vereint</title>
@@ -12,7 +12,7 @@ function build($page)
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/style_mobile.css">
         <link rel="stylesheet" href="./css/mybootstrap.css">
-        <script type="text/javascript" src="./js/script.js"></script>
+        <script src="./js/script.js"></script>
         <script src='./js/jquery-3.5.1.min.js'></script>
 
         <?php

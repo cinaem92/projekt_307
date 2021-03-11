@@ -1,9 +1,8 @@
-<header>
     <div class="header">
     </div>
     <div class="container blueBackground">
         <div></div>
-        <div class="topnav" id="myTopnav" ;>
+        <div class="topnav" id="myTopnav">
             <a href="home">Home</a>
             <div class="dropdown">
                 <a class="dropbtn" href="aktuellehunde">Aktuelle Hunde</a>
@@ -40,4 +39,3 @@
         </div>
         <div></div>
     </div>
-</header>

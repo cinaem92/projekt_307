@@ -1,6 +1,5 @@
 <div class="container brownBackground redColor">
     <div></div>
-    <footer>
         <div class="adresseFooter">
             <p>Vermittlungshilfe vereint <br>
                 Engehalde 26 <br>
@@ -19,5 +18,4 @@
                 <a href="galerie">Galerie</a>
             </p>
         </div>
-    </footer>
 </div>
