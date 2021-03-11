@@ -12,7 +12,7 @@ function build($page) {
             <link rel="stylesheet" href="./css/style.css">
             <link rel="stylesheet" href="./css/style_mobile.css">
             <link rel="stylesheet" href="./css/myBootstrap.css">
-            <script type="text/javascript" src="./js/script.js"></script>
+            <script type="text/javascript" src="./js/_mainscript.js"></script>
             <script src='./js/jquery-3.5.1.min.js'></script>
 
             <?php

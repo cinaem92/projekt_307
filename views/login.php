@@ -78,4 +78,4 @@
         </form>
     </div>
 
-    <script src="./js/validateLogin.js"></script>
+    <script src="./js/validatelogin.js"></script>

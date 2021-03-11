@@ -85,4 +85,4 @@
 </div>
 
 
-<script src="./js/validateRegister.js"></script>
+<script src="./js/validateregister.js"></script>

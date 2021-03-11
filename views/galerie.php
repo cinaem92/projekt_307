@@ -9,5 +9,5 @@
     <img class="galerie" src="img/bella.jpg" alt="Bella">
     <img class="galerie" src="img/blacky.jpg" alt="Blacky">
     <img class="galerie" src="img/maximus.jpg" alt="Fanny">
-    <script src="./js/galerie.js"></script>
+    <script src="./js/galeriescript.js"></script>
 </div>
