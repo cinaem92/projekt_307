@@ -9,10 +9,13 @@
                 <a class="dropbtn" href="aktuellehunde">Aktuelle Hunde</a>
                 <i class="fa fa-caret-down"></i>
                 <div class="dropdown-content">
-                <a href="aktuellehunde">Aktuelle Hunde</a>
+                    <a href="aktuellehunde">Aktuelle Hunde</a>
                     <a href="vermittlung">Vermittlung</a>
-                    <a href="neuerhund">Neuen Hund erfassen</a>
-
+                    <?php if (!empty($_SESSION['userdata'])) { ?>
+                        <a href="hundneu">Neuen Hund erfassen</a>
+                    <?php } else { ?>
+                        <a href="hundneu" style="display:none">Neuen Hund erfassen</a>
+                    <?php } ?>
                 </div>
             </div>
             <div class="dropdown">

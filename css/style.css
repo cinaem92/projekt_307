@@ -339,5 +339,10 @@
 
 
   .btn-newDog {
+    color: #D9D9D9;
     background-color: #5D7A8C;
+  }
+
+  .btn-newDog a {
+    text-decoration: none;
   }

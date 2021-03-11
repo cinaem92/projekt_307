@@ -5,14 +5,14 @@
 </div>
 
 
-<div class="row">
-    <div class="col">
-        <a href="registration" class="btn btn-newDog">Jetzt registrieren</a>
+<div class="row mt-5">
+    <div class="col mt-2">
+        <a href="hundneu" class="btn btn-newDog">Neuen Hund erfassen</a>
     </div>
-    <div class="col">
-        <a href="registration" class="btn btn-newDog">Jetzt registrieren</a>
+    <div class="col mt-2">
+        <a href="hundneu" class="btn btn-newDog">Bestehenden Hund bearbeiten</a>
     </div>
-    <div class="col">
-        <a href="registration" class="btn btn-newDog">Jetzt registrieren</a>
+    <div class="col mt-2">
+        <a href="hundneu" class="btn btn-newDog">Bestehenden Hund löschen</a>
     </div>
 </div>

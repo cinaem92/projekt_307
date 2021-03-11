@@ -23,11 +23,26 @@ if (!empty($url[1])) {
 		case 'vermittlung':
 			build('vermittlung.php');
 			break;
-		case 'neuerhund':
-			if(!empty($_SESSION['userdata'])) {
-				var_dump($_SESSION['userdata']);
-			build('neuerhund.php');
-			break;
+		case 'hundneu':
+			if (!empty($_SESSION['userdata'])) {
+				build('hundneu.php');
+				break;
+			} else {
+				build('404.php');
+				break;
+			}
+		case 'hundbearbeiten':
+			if (!empty($_SESSION['userdata'])) {
+				build('neuerhund.php');
+				break;
+			} else {
+				build('404.php');
+				break;
+			}
+		case 'hundloeschen':
+			if (!empty($_SESSION['userdata'])) {
+				build('neuerhund.php');
+				break;
 			} else {
 				build('404.php');
 				break;
@@ -60,13 +75,16 @@ if (!empty($url[1])) {
 			build('erfolgreich.php');
 			break;
 		case 'validateregdata':
-			build('validateRegData.php');
+			build('validateregdata.php');
 			break;
 		case 'validatelogindata':
 			build('validatelogindata.php');
 			break;
 		case 'impressum':
 			build('impressum.php');
+			break;
+		case 'logout':
+			session_destroy();
 			break;
 		default:
 			build('404.php');
