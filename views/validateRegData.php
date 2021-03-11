@@ -80,12 +80,12 @@
             VALUES (?,?,?,?,?,?,?)");
 
             // passwprt hashen
-            $_SESSION['data']['password'] = md5($_SESSION['data']['password']);
+            $password = hash1($_SESSION['data']['password']);
 
             // Daten den eweiligen Feldern zuweisen
             $userQuery->bind_param("sssssss",
             $_SESSION['data']['name'], $_SESSION['data']['lastname'], $_SESSION['data']['username'], 
-            $_SESSION['data']['password'], $_SESSION['data']['address'], $_SESSION['data']['email'], 
+            $password, $_SESSION['data']['address'], $_SESSION['data']['email'], 
             $_SESSION['data']['telephone']);
 
             $userQuery->execute();
