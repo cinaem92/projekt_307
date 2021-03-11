@@ -59,41 +59,23 @@ if (!empty($_POST)) {
         //daten in die Datenbank abspitzen
         $db = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
 
-
-        echo "******************************************************************************************************
-            *************************************************************************************************************
-            ************************************************************************************************************
-            ***********************************************************************************************************";
-        var_dump($db);
-        echo "******************************************************************************************************
-            *************************************************************************************************************
-            ************************************************************************************************************
-            ***********************************************************************************************************";
-
-
         // Felder für die Daten vorbereiten
-        $userQuery = $db->prepare("INSERT INTO user (user_name, user_lastname, user_username, user_password, user_address, user_email, user_telephone)
-            VALUES (?,?,?,?,?,?,?)");
+        $dogQuery = $db->prepare("INSERT INTO dog (dog_name, actual_address, dog_race, dog_gender, dog_age)
+            VALUES (?,?,?,?,?)");
         // Daten den eweiligen Feldern zuweisen
-        $userQuery->bind_param(
+        $dogQuery->bind_param(
             "sssssss",
-            $_SESSION['data']['name'],
-            $_SESSION['data']['lastname'],
-            $_SESSION['data']['username'],
-            $_SESSION['data']['password'],
-            $_SESSION['data']['address'],
-            $_SESSION['data']['email'],
-            $_SESSION['data']['telephone']
-        );
+            $_SESSION['data']['dogname'],
+            $_SESSION['data']['actualAddress'],
+            $_SESSION['data']['dogRace'],
+            $_SESSION['data']['dogGender'],
+            $_SESSION['data']['dogAge'],);
 
-        $userQuery->execute();
+        $dogQuery->execute();
 
-        // Daten werden erst jetzt in die DB eingefügt
-        // if ($userQuery->execute()){
-        //     // Falls die Datentransplation erfolgreich war, wird auf die Seite LOGIN weitergeleitet
-        //     header("Location: login");
-        //     exit;
-        // }
+        header("Location: home");
+
+       
 
     }
 } else {

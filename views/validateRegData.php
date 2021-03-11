@@ -62,6 +62,7 @@
             //daten in die Datenbank abspitzen
             $db = getDatabase();
             
+
             // Felder für die Daten vorbereiten
             $userQuery = $db->prepare("INSERT INTO user (user_name, user_lastname, user_username, user_password, user_address, user_email, user_telephone)
             VALUES (?,?,?,?,?,?,?)");
@@ -71,9 +72,13 @@
 
             // Daten den eweiligen Feldern zuweisen
             $userQuery->bind_param("sssssss",
-            $_SESSION['data']['name'], $_SESSION['data']['lastname'], $_SESSION['data']['username'], 
-            $password, $_SESSION['data']['address'], $_SESSION['data']['email'], 
-            $_SESSION['data']['telephone']);
+                $_SESSION['data']['name'],
+                $_SESSION['data']['lastname'],
+                $_SESSION['data']['username'], 
+                $password,
+                $_SESSION['data']['address'],
+                $_SESSION['data']['email'], 
+                $_SESSION['data']['telephone']);
 
             $userQuery->execute();
 
@@ -86,8 +91,7 @@
             $db->close();
 
             //header("Location: login");
-            exit;
-
+            
 
             
         }

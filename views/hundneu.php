@@ -46,7 +46,7 @@
                 <label>Alter</label>
             </div>
             <div>
-                <input type="text" name="dogAge" id="dogAge" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="dogAge" id="dogAge" class="inputs" placeholder="" minlength="1">
             </div>
 
 
