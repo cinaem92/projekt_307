@@ -110,8 +110,6 @@
         echo "Das Formular wurde nicht korrekt ausgefüllt!";
     }
 
-
-
     //Speichern der Session
 
 ?>
