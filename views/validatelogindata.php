@@ -7,7 +7,7 @@ $username = $_POST['username'];
 $password = md5($_POST['password']);
 
 // Query vorbereiten und ausführen
-$sql = "SELECT user_id, user_username FROM user WHERE user_username = ? AND user_password = ?;";
+$sql = "SELECT user_id, user_username FROM user WHERE user_username = $username AND user_password = $password;";
 $statement = $db->prepare($sql);
 $statement->bind_param('ss', $username, $password);
 $statement->execute();
