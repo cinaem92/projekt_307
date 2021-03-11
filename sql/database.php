@@ -49,4 +49,9 @@
         $db->close();
 
     }
+
+    function hash1($password){
+        $salt = "IgBiSuper";
+        return sha1($password . $salt);
+    }
 ?>

@@ -1,7 +1,6 @@
 <?php
 
 
-
     if (!empty($_POST)) {
 
         $data = $_POST;
@@ -62,17 +61,6 @@
             $_SESSION['data'] = $data;
             //daten in die Datenbank abspitzen
             $db = getDatabase();
-
-
-            echo "******************************************************************************************************
-            *************************************************************************************************************
-            ************************************************************************************************************
-            ***********************************************************************************************************";
-            var_dump($db);
-            echo "******************************************************************************************************
-            *************************************************************************************************************
-            ************************************************************************************************************
-            ***********************************************************************************************************";
             
 
             // Felder für die Daten vorbereiten
@@ -80,12 +68,12 @@
             VALUES (?,?,?,?,?,?,?)");
 
             // passwprt hashen
-            $_SESSION['data']['password'] = md5($_SESSION['data']['password']);
+            $password = hash1($_SESSION['data']['password']);
 
             // Daten den eweiligen Feldern zuweisen
             $userQuery->bind_param("sssssss",
             $_SESSION['data']['name'], $_SESSION['data']['lastname'], $_SESSION['data']['username'], 
-            $_SESSION['data']['password'], $_SESSION['data']['address'], $_SESSION['data']['email'], 
+            $password, $_SESSION['data']['address'], $_SESSION['data']['email'], 
             $_SESSION['data']['telephone']);
 
             $userQuery->execute();
@@ -95,6 +83,7 @@
             // $userQuery->execute();
 
             header("Location: login");
+            exit;
 
             
             // Daten werden erst jetzt in die DB eingefügt
@@ -104,13 +93,14 @@
             //     exit;
             // }
 
+            $db->close();
         }
+
+        
         
     } else {
         echo "Das Formular wurde nicht korrekt ausgefüllt!";
     }
-
-
 
     //Speichern der Session
 
