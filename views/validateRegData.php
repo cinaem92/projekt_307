@@ -94,7 +94,7 @@
             // $userQuery->bind_param("ss", $_SESSION['data']['city'], $_SESSION['data']['plz']);
             // $userQuery->execute();
 
-            header('Location: login');
+            header("Location: login");
 
             
             // Daten werden erst jetzt in die DB eingefügt
