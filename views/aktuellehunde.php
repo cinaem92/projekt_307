@@ -6,10 +6,10 @@
         <img class="bildAktuellerHund" src="img/tomy.jpg" alt="tomy">
         <p>Informationen</p>
         <div class="infotext">
-            <p>Mischling Dackel x unbekannt</p>
-            <p>Männlich kastriert</p>
-            <p>Geburtsdatum: 8.3.2010</p>
-            <p>Herkunftsland: unbekannt</p>
+            <p name="dogRace">Mischling Dackel x unbekannt</p>
+            <p name="dogGender">Männlich kastriert</p>
+            <p name="dogAge">Alter: 20</p>
+            <p name="actualAddress">Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
     </div>
@@ -18,10 +18,10 @@
         <img class="bildAktuellerHund" src="img/aiko.jpg" alt="aiko">
         <p>Informationen</p>
         <div class="infotext">
-            <p>Mischling Berner Senn x unbekannt</p>
-            <p>Männlich kastriert</p>
-            <p>Geburtsdatum: 14.1.2017</p>
-            <p>Herkunftsland: Schweiz</p>
+            <p id="dogRace">Mischling Berner Senn x unbekannt</p>
+            <p id="dogGender">Männlich kastriert</p>
+            <p id="dogAge">Alter: 20</p>
+            <p id="actualAddress">Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
     </div>
@@ -30,10 +30,10 @@
         <img class="bildAktuellerHund" src="img/fanny.jpg" alt="fanny">
         <p>Informationen</p>
         <div class="infotext">
-            <p>Mischling Collie x unbekannt</p>
-            <p>Männlich kastriert</p>
-            <p>Geburtsdatum: 8.3.2010</p>
-            <p>Herkunftsland: unbekannt</p>
+            <p id="dogRace">Mischling Collie x unbekannt</p>
+            <p id="dogGender">Männlich kastriert</p>
+            <p id="dogAge">Alter: 20</p>
+            <p id="actualAddress">Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
     </div>
@@ -42,10 +42,10 @@
         <img class="bildAktuellerHund" src="img/rosa.jpg" alt="rosa">
         <p>Informationen</p>
         <div class="infotext">
-            <p>Cavalier King Charles</p>
-            <p>weiblich kastriert</p>
-            <p>Geburtsdatum: 22.9.2016</p>
-            <p>Herkunftsland: England</p>
+            <p id="dogRace">Cavalier King Charles</p>
+            <p id="dogGender">Männlich kastriert</p>
+            <p id="dogAge">Alter: 20</p>
+            <p id="actualAddress">Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
     </div>
@@ -54,10 +54,10 @@
         <img class="bildAktuellerHund" src="img/bella.jpg" alt="bella">
         <p>Informationen</p>
         <div class="infotext">
-            <p>Mischling Beagle x unbekannt</p>
-            <p>Männlich kastriert</p>
-            <p>Geburtsdatum: 5.7.2017</p>
-            <p>Herkunftsland: unbekannt</p>
+            <p id="dogRace">Mischling Beagle x unbekannt</p>
+            <p id="dogGender">Männlich kastriert</p>
+            <p id="dogAge">Alter: 20</p>
+            <p id="actualAddress">Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
     </div>
@@ -66,10 +66,10 @@
         <img class="bildAktuellerHund" src="img/blacky.jpg" alt="blacky">
         <p>Informationen</p>
         <div class="infotext">
-            <p>Labrador</p>
-            <p>Männlich kastriert</p>
-            <p>Geburtsdatum: Dezember 2018</p>
-            <p>Herkunftsland: Deutschland</p>
+            <p id="dogRace">Labrador</p>
+            <p id="dogGender">Männlich kastriert</p>
+            <p id="dogAge">Alter: 20</p>
+            <p id="actualAddress">Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
     </div>
