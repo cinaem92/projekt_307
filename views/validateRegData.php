@@ -62,7 +62,6 @@
             //daten in die Datenbank abspitzen
             $db = getDatabase();
             
-
             // Felder für die Daten vorbereiten
             $userQuery = $db->prepare("INSERT INTO user (user_name, user_lastname, user_username, user_password, user_address, user_email, user_telephone)
             VALUES (?,?,?,?,?,?,?)");
