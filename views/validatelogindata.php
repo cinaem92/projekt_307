@@ -27,6 +27,7 @@ if (!empty($user)) {
 
     header("Location: loginuebersicht");
 } else {
+    echo "Die Eingaben sind nicht korrekt!";
     header("Location: login");
 }
 
