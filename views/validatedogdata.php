@@ -35,23 +35,24 @@ if (!empty($_POST)) {
         $isValid = false;
     }
 
-    // Telefonnummer überprüfen
-    if (strlen($data['telephone']) < 3) {
-        echo "Die Telefonnummer ist zu Kurz";
+    // Hunderasse überprüfen
+    if (strlen($data['dogRace']) < 3) {
+        echo "Der Name der Stadt ist zu Kurz";
         $isValid = false;
     }
 
-    // Email überprüfen --> nicht leer, gültige emailadresse
-    if (empty($data['email']) || !preg_match('/^(\w{2,}|\w{2,}[\.\-]\w{2,})@(\w{2,}\.\w{2,}|\w{2,}[\.\-]\w{2,}\.\w{2,})$/', $data['email'])) {
-        echo 'Email entspricht nicht den Vorgaben';
+    // Geschlecht überprüfen
+    if (strlen($data['dogGender']) < 3) {
+        echo "Der Name der Stadt ist zu Kurz";
         $isValid = false;
     }
 
-    // Passwörter vergleichen
-    if (strcmp($data['password'], $data['passwordRepeat'])) {
-        echo "Passwörter waren nicht gleich!";
+    // Hundealter überprüfen
+    if (strlen($data['dogAge']) < 3) {
+        echo "Der Name der Stadt ist zu Kurz";
         $isValid = false;
     }
+
 
     if ($isValid) {
         $_SESSION['data'] = $data;
