@@ -33,7 +33,7 @@ if (!empty($url[1])) {
 			}
 		case 'hundbearbeiten':
 			if (!empty($_SESSION['userdata'])) {
-				build('neuerhund.php');
+				build('hundbearbeiten.php');
 				break;
 			} else {
 				build('404.php');
@@ -41,7 +41,7 @@ if (!empty($url[1])) {
 			}
 		case 'hundloeschen':
 			if (!empty($_SESSION['userdata'])) {
-				build('neuerhund.php');
+				build('hundloeschen.php');
 				break;
 			} else {
 				build('404.php');
