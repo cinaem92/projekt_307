@@ -52,10 +52,16 @@
             $isValid = false;
         }
 
+        //PLZ überprüfen
+        if (strlen($data['plz']) != 4 ){
+            echo "PLZ nicht valid";
+            $isValid = false;
+        }
+
         if($isValid){
             $_SESSION['data'] = $data;
             //daten in die Datenbank abspitzen
-            $db = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
+            $db = getDatabase();
 
 
             echo "******************************************************************************************************
@@ -72,6 +78,10 @@
             // Felder für die Daten vorbereiten
             $userQuery = $db->prepare("INSERT INTO user (user_name, user_lastname, user_username, user_password, user_address, user_email, user_telephone)
             VALUES (?,?,?,?,?,?,?)");
+
+            // passwprt hashen
+            $_SESSION['data']['password'] = md5($_SESSION['data']['password']);
+
             // Daten den eweiligen Feldern zuweisen
             $userQuery->bind_param("sssssss",
             $_SESSION['data']['name'], $_SESSION['data']['lastname'], $_SESSION['data']['username'], 
@@ -79,6 +89,13 @@
             $_SESSION['data']['telephone']);
 
             $userQuery->execute();
+
+            // $userQuery = $db->prepare("INSERT INTO city (city_name, city_PLZ) VALUES (?,?)");
+            // $userQuery->bind_param("ss", $_SESSION['data']['city'], $_SESSION['data']['plz']);
+            // $userQuery->execute();
+
+            header('Location: login');
+
             
             // Daten werden erst jetzt in die DB eingefügt
             // if ($userQuery->execute()){

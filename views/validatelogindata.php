@@ -4,7 +4,7 @@ $db = getDatabase();
 
 // Daten aus Formular holen
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 
 // Query vorbereiten und ausführen
 $sql = "SELECT user_id, user_username FROM user WHERE user_username = ? AND user_password = ?;";
