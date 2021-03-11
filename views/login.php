@@ -13,7 +13,7 @@
 
         <p>Gibt es Schwierigkeiten mit Ihrem Login?</p>
 
-        <p><a href="kontaktformular">Kontaktieren Sie uns</a></p>
+        <p><a href="anfrage">Kontaktieren Sie uns</a></p>
 
     
 

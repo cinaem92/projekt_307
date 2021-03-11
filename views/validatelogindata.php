@@ -29,6 +29,8 @@ while($statement->fetch()){
     $user = array('user_id' => $user_id, 'user_username' => $username);
 }
 
+$db->close();
+
 if(!empty($user)){
     $_SESSION['userdata'] = array('user_id' => $user['user_id'], 'username' => $user['user_username'] );
 
