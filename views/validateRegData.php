@@ -83,10 +83,27 @@
             $userQuery->execute();
 
             
-            $cityQuery = $db->prepare("INSERT INTO city (city_name, city_PLZ)
-            VALUES (?,?)");
-            $cityQuery->bind_param("si", $_SESSION['data']['city'], $_SESSION['data']['plz']);
-            $cityQuery->execute();
+            //UserID holen um in die Citytabelle zu speichern
+            // $username = $_SESSION['data']['username'];
+            // $infoQuery = $db->prepare("SELECT user_id FROM user WHERE user_username = ?;");
+            // $infoQuery->bind_param("s", $username);
+            // $infoQuery->execute();
+
+            // $infoQuery->bind_result($user_id);
+
+            // while ($infoQuery->fetch()) {
+            //     $userID = array('user_id' => $user_id);
+            // }
+            // var_dump($userID);
+
+            
+            // $cityQuery = $db->prepare("INSERT INTO city (user_id, city_name, city_PLZ)
+            // VALUES (?,?,?)");
+            // $cityQuery->bind_param("iss",
+            //     $userID, 
+            //     $_SESSION['data']['city'], 
+            //     $_SESSION['data']['plz']);
+            // $cityQuery->execute();
 
             $db->close();
 

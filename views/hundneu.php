@@ -2,7 +2,7 @@
 <div class="fliesstext">
     <h2>Geben Sie hier die Daten ein</h2>
     <br>
-    <form action="#" method="post" onchange="">
+    <form action="validatedogdata" method="post" onchange="">
         <div class="grid-formular">
 
             <!--General Informations-->
@@ -22,7 +22,7 @@
                 <label>PLZ</label>
             </div>
             <div>
-                <input type="text" name="plz" id="plz" class="inputs" placeholder="" minlength="4" maxlength="4">
+                <input type="number" name="plz" id="plz" class="inputs" placeholder="" minlength="4" maxlength="4">
             </div>
             <div class="labels">
                 <label>Ort</label>

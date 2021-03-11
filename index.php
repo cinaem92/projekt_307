@@ -86,6 +86,9 @@ if (!empty($url[1])) {
 		case 'logout':
 			session_destroy();
 			break;
+		case 'validatedogdata':
+			build('validatedogdata.php');
+			break;
 		default:
 			build('404.php');
 			break;
