@@ -84,7 +84,6 @@ if (!empty($url[1])) {
 			build('impressum.php');
 			break;
 		case 'logout':
-			// session_destroy();
 			build('logout.php');
 			break;
 		case 'validatedogdata':
