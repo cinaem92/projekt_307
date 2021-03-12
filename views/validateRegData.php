@@ -63,59 +63,9 @@
             insertValuesCity();
             insertValuesUser();
             
-            // //daten in die Datenbank abspitzen
-            // $db = getDatabase();
-            
 
-            // // Felder für die Daten vorbereiten
-            // $userQuery = $db->prepare("INSERT INTO user (user_name, user_lastname, user_username, user_password, user_address, user_email, user_telephone)
-            // VALUES (?,?,?,?,?,?,?)");
-
-            // // passwprt hashen
-            // $password = hash1($_SESSION['data']['password']);
-
-            // // Daten den eweiligen Feldern zuweisen
-            // $userQuery->bind_param("sssssss",
-            //     $_SESSION['data']['name'],
-            //     $_SESSION['data']['lastname'],
-            //     $_SESSION['data']['username'], 
-            //     $password,
-            //     $_SESSION['data']['address'],
-            //     $_SESSION['data']['email'], 
-            //     $_SESSION['data']['telephone']);
-
-            // $userQuery->execute();
-
-            
-            // //UserID holen um in die Citytabelle zu speichern
-            // // $username = $_SESSION['data']['username'];
-            // // $infoQuery = $db->prepare("SELECT user_id FROM user WHERE user_username = ?;");
-            // // $infoQuery->bind_param("s", $username);
-            // // $infoQuery->execute();
-
-            // // $infoQuery->bind_result($user_id);
-
-            // // while ($infoQuery->fetch()) {
-            // //     $userID = array('user_id' => $user_id);
-            // // }
-            // // var_dump($userID);
-
-            // $userID = $db->insert_id;
-
-            // $cityQuery = $db->prepare("INSERT INTO city (user_id, city_name, city_PLZ)
-            // VALUES (?,?,?)");
-            // $cityQuery->bind_param("isi",
-            //     $userID, 
-            //     $_SESSION['data']['city'], 
-            //     $_SESSION['data']['plz']);
-            // $cityQuery->execute();
-
-            // $db->close();
-
-            // header("Location: login");
-           
-
-            
+            header("Location: login");
+                   
         }
 
         
