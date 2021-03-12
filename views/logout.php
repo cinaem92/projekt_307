@@ -1,5 +1,5 @@
 <?php
-session_destroy();
- 
-echo "Logout erfolgreich";
+    session_destroy();
+    header("Location: login");
+
 ?>

@@ -35,6 +35,11 @@
                     <a href="registrierung">Registrierung</a>
                 </div>
             </div>
+            <?php if (!empty($_SESSION['loggedin'])) { ?>
+                        <a href="logout">Logout</a>
+                    <?php } else { ?>
+                        <a href="logout" style="display:none">Logout</a>
+                    <?php } ?>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="hamburgerMenu()">&#9776;</a>
         </div>
         <div></div>
