@@ -50,7 +50,7 @@ function insertValuesUser()
     $userQuery = $db->prepare("INSERT INTO user (city_id, user_name, user_lastname, user_username, user_password, user_address, user_email, user_telephone)
         VALUES (?,?,?,?,?,?,?,?)");
 
-// passwort hashen
+    // passwort hashen
     $password = hash1($_SESSION['data']['password']);
 
     $userQuery->bind_param(
@@ -66,18 +66,29 @@ function insertValuesUser()
     );
 
     $userQuery->execute();
+    $_SESSION['data']['userId'] = $db->insert_id;
     $db->close();
 }
 
-// $cityId = $db->insert_id;
+function insertValuesDog()
+{
+    $db = getDatabase();
 
+    $dogQuery = $db->prepare("INSERT INTO dog (user_id, city_id, dog_name, actual_address)
+    VALUES (?, ?, ?,?)");
+    $dogQuery->bind_param(
+        "iiss",
+        $_SESSION['data']['userId'],
+        $_SESSION['data']['cityId'],
+        $_SESSION['dog']['dog_name'],
+        $_SESSION['dog']['actual_address']
+    );
 
-// $dogQuery = $db->prepare("INSERT INTO dog (dog_name, actual_address) VALUES (?,?)");
-// $dogQuery->bind_param("ss", $_SESSION['question'], $_SESSION['products'][count($_SESSION['products'])-1], $kontaktId, $date);
-// $dogQuery->bind_param("ss", $_SESSION['dog']['dog_name'], $_SESSION['dog']['actual_address']);
-// $dogQuery->execute();
-// $dogId = $db->insert_id;
+    $dogQuery->execute();
+    $db->close();
+}
 
+//Passwort-Hashfunktion
 function hash1($password)
 {
     $salt = "IgBiSuper";
