@@ -24,7 +24,7 @@ if (!empty($url[1])) {
 			build('vermittlung.php');
 			break;
 		case 'hundneu':
-			if (!empty($_SESSION['userdata'])) {
+			if (!empty($_SESSION['loggedin'])) {
 				build('hundneu.php');
 				break;
 			} else {
@@ -32,7 +32,7 @@ if (!empty($url[1])) {
 				break;
 			}
 		case 'hundbearbeiten':
-			if (!empty($_SESSION['userdata'])) {
+			if (!empty($_SESSION['loggedin'])) {
 				build('hundbearbeiten.php');
 				break;
 			} else {
@@ -40,7 +40,7 @@ if (!empty($url[1])) {
 				break;
 			}
 		case 'hundloeschen':
-			if (!empty($_SESSION['userdata'])) {
+			if (!empty($_SESSION['loggedin'])) {
 				build('hundloeschen.php');
 				break;
 			} else {

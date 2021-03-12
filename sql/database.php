@@ -94,22 +94,23 @@ function selectValuesUser($username, $password)
 {
     $db = getDatabase();
 
-    $userQuery = $db->prepare("SELECT user_id, user_username
-    FROM user WHERE user_username = ? AND user_password = ?;");
-    
+    $userQuery = $db->prepare("SELECT *
+    FROM user WHERE user_username = ? AND user_password = ?");
+
     $userQuery->bind_param(
         'ss',
         $username,
         $password
     );
-    $userQuery->execute();
-
-    $user = NULL;
-
-    $userQuery->bind_result($user_id, $username);
     
-    while ($userQuery->fetch()) {
-        $user = array('user_id' => $user_id, 'user_username' => $username);
+    $userQuery->execute();
+    
+    $_SESSION['test'] = $userQuery;
+    // $userQuery->bind_result($user_id, $username);
+    $userResult = $userQuery->get_result()->fetch_all(MYSQLI_ASSOC);
+
+    if (sizeof($userResult) > 0) {
+        $_SESSION['loggedin'] = array('user_id' => $userResult[0]['user_id'], 'user_username' => $userResult[0]['user_username']);
     }
     $db->close();
 }

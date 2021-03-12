@@ -10,7 +10,7 @@
                 <div class="dropdown-content">
                     <a href="aktuellehunde">Aktuelle Hunde</a>
                     <a href="vermittlung">Vermittlung</a>
-                    <?php if (!empty($_SESSION['userdata'])) { ?>
+                    <?php if (!empty($_SESSION['loggedin'])) { ?>
                         <a href="hundneu">Neuen Hund erfassen</a>
                     <?php } else { ?>
                         <a href="hundneu" style="display:none">Neuen Hund erfassen</a>
