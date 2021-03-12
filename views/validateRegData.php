@@ -63,12 +63,9 @@
             insertValuesCity();
             insertValuesUser();
             
-
             header("Location: login");
                    
         }
-
-        
         
     } else {
         echo "Das Formular wurde nicht korrekt ausgefüllt!";
