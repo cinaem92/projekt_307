@@ -88,6 +88,29 @@ function insertValuesDog()
     $db->close();
 }
 
+
+
+function selectValuesUser($username, $password)
+{
+    $db = getDatabase();
+
+    $userQuery = $db->prepare("SELECT user_id, user_username FROM user WHERE user_username = ? AND user_password = ?;");
+    $userQuery->bind_param(
+        'ss',
+        $username,
+        $password
+    );
+    $userQuery->execute();
+
+    $user = NULL;
+
+    $userQuery->bind_result($user_id, $username);
+    while ($userQuery->fetch()) {
+        $user = array('user_id' => $user_id, 'user_username' => $username);
+    }
+    $db->close();
+}
+
 //Passwort-Hashfunktion
 function hash1($password)
 {

@@ -1,13 +1,12 @@
 <?php
 
 $db = getDatabase();
-// //Bool
-// password_verify(richtigesPassword, passwordausDB);
 
 // Daten aus Formular holen
 $username = $_POST['username'];
 $password = hash1($_POST['password']);
 
+selectValuesUser($username, $password);
 // var_dump($password);
 
 // // Query vorbereiten und ausführen
@@ -32,16 +31,13 @@ $password = hash1($_POST['password']);
 // $db->close();
 
 
-
-
-
-
 if(!empty($user)){
     $_SESSION['userdata'] = array('user_id' => $user['user_id'], 'username' => $user['user_username'] );
 
     header("Location: loginuebersicht");
 } else {
     header("Location: login");
+    
 }
 
 
