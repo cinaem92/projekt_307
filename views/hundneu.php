@@ -22,31 +22,31 @@
                 <label>PLZ</label>
             </div>
             <div>
-                <input type="number" name="plz" id="plz" class="inputs" placeholder="" minlength="4" maxlength="4">
+                <input type="number" name="plz" id="plz" class="inputs" required>
             </div>
             <div class="labels">
                 <label>Ort</label>
             </div>
             <div>
-                <input type="text" name="city" id="city" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="city" id="city" class="inputs" placeholder="" minlength="3" required>
             </div>
             <div class="labels">
                 <label>Hunderasse</label>
             </div>
             <div>
-                <input type="text" name="dogRace" id="dogRace" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="dogRace" id="dogRace" class="inputs" placeholder="" minlength="3" required>
             </div>
             <div class="labels">
                 <label>Geschlecht</label>
             </div>
             <div>
-                <input type="text" name="dogGender" id="dogGender" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="dogGender" id="dogGender" class="inputs" placeholder="" minlength="3" required>
             </div>
             <div class="labels">
                 <label>Alter</label>
             </div>
             <div>
-                <input type="number" name="dogAge" id="dogAge" class="inputs" placeholder="" minlength="1">
+                <input type="number" name="dogAge" id="dogAge" class="inputs" required>
             </div>
 
 
