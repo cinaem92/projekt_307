@@ -1,9 +1,9 @@
 <?php
 function getDatabase()
 {
-    $conn = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
+    $db = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
     // $conn = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
-    return $conn;
+    return $db;
 }
 
 function showUser()
@@ -74,42 +74,56 @@ function insertValuesDog()
 {
     $db = getDatabase();
 
-    $dogQuery = $db->prepare("INSERT INTO dog (user_id, city_id, dog_name, actual_address)
-    VALUES (?,?,?,?)");
+    
+
+    $dogQuery = $db->prepare("INSERT INTO dog (user_id, city_id, dog_name, actual_address, dog_race, dog_gender, dog_age)
+    VALUES (?,?,?,?,?,?,?)");
     $dogQuery->bind_param(
-        "iiss",
-        $_SESSION['data']['userId'],
+        "iissssi",
+        $_SESSION['loggedin']['userId'],
         $_SESSION['data']['cityId'],
-        $_SESSION['dog']['dog_name'],
-        $_SESSION['dog']['actual_address']
+        $_SESSION['data']['dog_name'],
+        $_SESSION['data']['actual_address'],
+        $_SESSION['data']['dogRace'],
+        $_SESSION['data']['dogGender'],
+        $_SESSION['data']['dogAge']
     );
 
     $dogQuery->execute();
     $db->close();
 }
 
-
-
 function selectValuesUser($username, $password)
 {
     $db = getDatabase();
 
 
-    $selectQuery = $db->prepare("SELECT user_id, user_username FROM user WHERE user_username = ? AND user_password = ?");
+    $selectQuery = $db->prepare("SELECT * FROM user WHERE user_username = ? AND user_password = ?");
 
     $selectQuery->bind_param(
         "ss",
-        $_SESSION['loggedin']['user_username'],
-        $_SESSION['loggedin']['user_password']);
+        $username,
+        $password);
 
     $selectQuery->execute();
 
-    $selectQuery->bind_result($user_id, $username);
+    // $selectQuery->bind_result($user_id, $username);
 
 
-    while ($selectQuery->fetch()) {
-        $_SESSION['loggedin'] = array('user_id' => $user_id, 'user_username' => $username);
-    }
+    $userresult = $selectQuery->get_result()->fetch_all(MYSQLI_ASSOC);
+        
+        
+        if(sizeof($userresult) > 0) {
+
+            //Index 0 is used since there should only be one entry
+            $_SESSION['loggedin']['userId'] = $userresult[0]['user_id'];
+            $_SESSION['loggedin']['user_username'] = $userresult[0]['user_username'];
+
+        }
+
+    // while ($selectQuery->fetch()) {
+    //     $_SESSION['loggedin'] = array('user_id' => $user_id, 'user_username' => $username);
+    // }
 
     $db->close();
 }
