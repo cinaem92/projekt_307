@@ -1,11 +1,12 @@
 <?php
+//Datenbank holen:
 function getDatabase()
 {
     $db = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
     // $conn = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
     return $db;
 }
-
+//nutzlose Funktion:
 function showUser()
 {
     $db = getDatabase();
@@ -21,7 +22,7 @@ function showUser()
     $db->close();
 }
 
-
+//Daten des Orts in die Datenbank abspitzen:
 function insertValuesCity()
 {
     $db = getDatabase();
@@ -42,7 +43,7 @@ function insertValuesCity()
     $db->close();
 }
 
-
+//Registrierungsdaten abspitzen
 function insertValuesUser()
 {
     $db = getDatabase();
@@ -70,6 +71,7 @@ function insertValuesUser()
     $db->close();
 }
 
+//Hundedaten abspitzen:
 function insertValuesDog()
 {
     $db = getDatabase();
@@ -82,8 +84,8 @@ function insertValuesDog()
         "iissssi",
         $_SESSION['loggedin']['userId'],
         $_SESSION['data']['cityId'],
-        $_SESSION['data']['dog_name'],
-        $_SESSION['data']['actual_address'],
+        $_SESSION['data']['dogname'],
+        $_SESSION['data']['actualAddress'],
         $_SESSION['data']['dogRace'],
         $_SESSION['data']['dogGender'],
         $_SESSION['data']['dogAge']
@@ -93,6 +95,7 @@ function insertValuesDog()
     $db->close();
 }
 
+//Logindaten überprüfen:
 function selectValuesUser($username, $password)
 {
     $db = getDatabase();

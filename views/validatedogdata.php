@@ -7,9 +7,7 @@ if (!empty($_POST)) {
     $data = $_POST;
     $isValid = true;
 
-    var_dump($data);
-    echo "waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas";
-    var_dump($_SESSION['loggedin']['userId']);
+    
 
 
     // Hundename überprüfen
@@ -60,10 +58,9 @@ if (!empty($_POST)) {
         $_SESSION['data'] = $data;
         //daten in die Datenbank abspitzen
         insertValuesCity();
-        var_dump($_SESSION['data']);
         insertValuesDog();
         
-        //header("Location: loginuebersicht");
+        header("Location: loginuebersicht");
     }
 } else {
     echo "Das Formular wurde nicht korrekt ausgefüllt!";
