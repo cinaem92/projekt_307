@@ -6,7 +6,15 @@
         $data = $_POST;
         $isValid = true;
 
-        var_dump($data);
+        $data['name'] = htmlspecialchars($data['name']);
+        $data['lastname'] = htmlspecialchars($data['lastname']);
+        $data['address'] = htmlspecialchars($data['address']);
+        $data['city'] = htmlspecialchars($data['city']);
+        $data['telephone'] = htmlspecialchars($data['telephone']);
+        $data['email'] = htmlspecialchars($data['email']);
+        $data['password'] = htmlspecialchars($data['password']);
+        $data['passwordRepeat'] = htmlspecialchars($data['passwordRepeat']);
+        $data['plz'] = htmlspecialchars($data['plz']);
 
     
         // Vorname überprüfen

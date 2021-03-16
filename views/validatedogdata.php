@@ -7,8 +7,14 @@ if (!empty($_POST)) {
     $data = $_POST;
     $isValid = true;
 
+    $data['dogname'] = htmlspecialchars($data['dogname']);
+    $data['actualAddress'] = htmlspecialchars($data['actualAddress']);
+    $data['plz'] = htmlspecialchars($data['plz']);
+    $data['city'] = htmlspecialchars($data['city']);
+    $data['dogRace'] = htmlspecialchars($data['dogRace']);
+    $data['dogGender'] = htmlspecialchars($data['dogGender']);
+    $data['dogAge'] = htmlspecialchars($data['dogAge']);
     
-
 
     // Hundename überprüfen
     if (strlen($data['dogname']) < 3) {

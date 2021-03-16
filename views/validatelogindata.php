@@ -2,8 +2,8 @@
 
 $db = getDatabase();
 
-$username = $_POST['username'];
-$password = hash1($_POST['password']);
+$username = htmlspecialchars($_POST['username']);
+$password = hash1(htmlspecialchars($_POST['password']));
 
 unset($_SESSION['loggedin']);
 
