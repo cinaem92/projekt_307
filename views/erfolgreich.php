@@ -5,9 +5,15 @@
 $_SESSION['dogs'] = $_POST['selectedDog'];
 
 if(!empty($_SESSION)) {
+    
+
 
 	//herausholen der Daten
 	$data = $_POST;
+    //XSS vorbeugen:
+    $data['username'] = htmlspecialchars($data['username']);
+    $data['email'] = htmlspecialchars($data['email']);
+    $data['question'] = htmlspecialchars($data['question']);
 
 	//Prüfvariable
 	$invalid = false;
@@ -61,7 +67,7 @@ if(!empty($_SESSION)) {
             <p><strong>Betroffener Hund:</strong></p>
         </div>
         <div class="col">
-            <p><?php echo $_POST['selectedDog']; ?></p>
+            <p><?php echo htmlspecialchars($_POST['selectedDog']); ?></p>
         </div>
 
     </div>
@@ -70,7 +76,7 @@ if(!empty($_SESSION)) {
             <p><strong>Deine Frage:</strong></p>
         </div>
         <div class="col">
-            <p> <?php echo $_POST['question']; ?> </p>
+            <p> <?php echo htmlspecialchars($_POST['question']); ?> </p>
         </div>
     </div>
 
@@ -79,7 +85,7 @@ if(!empty($_SESSION)) {
             <p><strong>Dein Benutzername:</strong> </p>
         </div>
         <div class="col">
-            <p><?php echo $_POST['username']; ?> </p>
+            <p><?php echo htmlspecialchars($_POST['username']); ?> </p>
         </div>
     </div>
 
@@ -88,7 +94,7 @@ if(!empty($_SESSION)) {
             <p><strong>Deine E-Mail-Adresse:</strong></p>
         </div>
         <div class="col">
-            <p><?php echo $_POST['email']; ?> </p>
+            <p><?php echo htmlspecialchars($_POST['email']); ?> </p>
         </div>
     </div>
 <br>

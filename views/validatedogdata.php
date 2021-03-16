@@ -6,7 +6,7 @@ if (!empty($_POST)) {
 
     $data = $_POST;
     $isValid = true;
-
+    //XSS vorbeugen:
     $data['dogname'] = htmlspecialchars($data['dogname']);
     $data['actualAddress'] = htmlspecialchars($data['actualAddress']);
     $data['plz'] = htmlspecialchars($data['plz']);

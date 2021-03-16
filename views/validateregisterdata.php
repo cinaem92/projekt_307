@@ -5,7 +5,7 @@
 
         $data = $_POST;
         $isValid = true;
-
+        //XSS vorbeugen:
         $data['name'] = htmlspecialchars($data['name']);
         $data['lastname'] = htmlspecialchars($data['lastname']);
         $data['address'] = htmlspecialchars($data['address']);

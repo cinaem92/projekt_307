@@ -1,7 +1,7 @@
 <?php
 
 $db = getDatabase();
-
+//XSS vorbeugen undVariablen zuweisen
 $username = htmlspecialchars($_POST['username']);
 $password = hash1(htmlspecialchars($_POST['password']));
 
