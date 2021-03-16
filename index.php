@@ -74,8 +74,8 @@ if (!empty($url[1])) {
 		case 'erfolgreich':
 			build('erfolgreich.php');
 			break;
-		case 'validateregdata':
-			build('validateregdata.php');
+		case 'validateregisterdata':
+			build('validateregisterdata.php');
 			break;
 		case 'validatelogindata':
 			build('validatelogindata.php');
