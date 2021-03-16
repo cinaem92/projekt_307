@@ -57,27 +57,12 @@ if (!empty($_POST)) {
     if ($isValid) {
         $_SESSION['data'] = $data;
         //daten in die Datenbank abspitzen
-        $db = getDatabase();
-
-        // Felder für die Daten vorbereiten
-        $dogQuery = $db->prepare("INSERT INTO dog (dog_name, actual_address, dog_race, dog_gender, dog_age)
-            VALUES (?,?,?,?,?)");
-        // Daten den eweiligen Feldern zuweisen
-        $dogQuery->bind_param(
-            "ssssi",
-            $_SESSION['data']['dogname'],
-            $_SESSION['data']['actualAddress'],
-            $_SESSION['data']['dogRace'],
-            $_SESSION['data']['dogGender'],
-            $_SESSION['data']['dogAge']);
-
-        $dogQuery->execute();
-
-        $db->close();
-        //header("Location: home");
-
-       
-
+        insertValuesCity();
+        insertValuesDog();
+        
+        
+        
+        
     }
 } else {
     echo "Das Formular wurde nicht korrekt ausgefüllt!";
