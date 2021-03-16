@@ -1,8 +1,8 @@
 <?php
 function getDatabase()
 {
-    // $conn = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
-    $conn = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
+    $conn = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
+    // $conn = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
     return $conn;
 }
 
@@ -75,7 +75,7 @@ function insertValuesDog()
     $db = getDatabase();
 
     $dogQuery = $db->prepare("INSERT INTO dog (user_id, city_id, dog_name, actual_address)
-    VALUES (?, ?, ?,?)");
+    VALUES (?,?,?,?)");
     $dogQuery->bind_param(
         "iiss",
         $_SESSION['data']['userId'],
@@ -100,7 +100,7 @@ function selectValuesUser($username, $password)
     $selectQuery->bind_param(
         "ss",
         $_SESSION['loggedin']['user_username'],
-        $_SESSION['loggedin']['user_password'],);
+        $_SESSION['loggedin']['user_password']);
 
     $selectQuery->execute();
 
