@@ -2,8 +2,8 @@
 //Datenbank holen:
 function getDatabase()
 {
-    $db = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
-    //$db = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
+    // $db = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
+    $db = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
     return $db;
 }
 //nutzlose Funktion:
