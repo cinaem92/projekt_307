@@ -7,6 +7,7 @@ function validate() {
 	checkCity();
 	checkMail();
 	checkPhone();
+	SelectHasValue();
 }
 
 
@@ -94,5 +95,20 @@ function checkMail() {
 	} else {
 		$('#email').css('border-color', '#FF6666');
 		// alert("You have entered an invalid email address!");
+	}
+}
+
+
+function SelectHasValue() {
+	var select = document.bewerbung.selected.selectedIndex;
+	if (select == "") {
+		var element = document.getElementById("selected");
+		element.style.borderColor = '#FF6666';
+		return false;
+	} else {
+		var element = document.getElementById("selected");
+		var selectedText = element.options[element.selectedIndex].text;
+		element.style.borderColor = '#66FF66';
+		return true;
 	}
 }

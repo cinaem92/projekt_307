@@ -3,7 +3,7 @@
     <h2>Bewerbungsformular</h2>
     <h3>Möchten Sie sich mit %DogName% Kontakt aufnehmen?</h3>
     <p>Vervollständigen Sie die untenstehenden Angaben:</p>
-    <form action="mailto:info@vermittlungvereint.ch" method="post" onchange="validate()">
+    <form name="bewerbung" action="mailto:info@vermittlungvereint.ch" method="post" onchange="validate()">
         <div class="grid-formular">
 
               <!--Vorname-->
@@ -62,7 +62,7 @@
             </div>
 
             <div class="selects">
-                <select class="inputs">
+                <select class="inputs" name="selected" id="selected">
                     <option value="1">-</option>
                     <option value="1">Freunde</option>
                     <option value="1">Verwandte</option>
@@ -73,9 +73,11 @@
             </div>
             <!--Send-Button-->
             <div class="sendButton">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Bewerben">
             </div>
 
         </div>
     </form>
 </div>
+
+<script src="./js/validateapplication.js"></script>
