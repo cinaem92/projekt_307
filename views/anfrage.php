@@ -19,7 +19,7 @@
                     <option value="Maximus">Maximus</option>
                     <option value="Rosa">Rosa</option>
                     <option value="Thomy">Thomy</option>
-                    <option value="nodog">Keine Hunde speziefische Frage</option>
+                    <option value="nodog">Keine hundespezifische Frage</option>
                 </select>
             </div>
             

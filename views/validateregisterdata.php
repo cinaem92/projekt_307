@@ -1,7 +1,6 @@
 <?php
-
-
     if (!empty($_POST)) {
+
 
         $data = $_POST;
         $isValid = true;
@@ -69,7 +68,10 @@
             $_SESSION['data'] = $data;
 
             insertValuesCity();
+
             insertValuesUser();
+            
+
             
             header("Location: login");
                    

@@ -4,6 +4,13 @@ function getDatabase()
 {
     // $db = new mysqli("localhost:3307", "test", "Welcome$21", "projekt_307");
     $db = new mysqli("localhost:3307", "cinaem", "phpMyAdmin", "projekt_307");
+    // $db = new Mysqli('localhost:3306', 'cinaem', 'Password2019$', 'cinaem');
+    if ($db->connect_errno) {
+
+        echo "Failed to connect to MySQL: " . $db->connect_error;
+
+        exit();
+    }
     return $db;
 }
 //nutzlose Funktion:
@@ -26,6 +33,9 @@ function showUser()
 function insertValuesCity()
 {
     $db = getDatabase();
+
+    var_dump($_SESSION['data']['city']);
+    var_dump($_SESSION['data']['plz']);
 
     //City-Query
     $cityQuery = $db->prepare("INSERT INTO city (city_name, city_PLZ)
@@ -76,7 +86,7 @@ function insertValuesDog()
 {
     $db = getDatabase();
 
-    
+
 
     $dogQuery = $db->prepare("INSERT INTO dog (user_id, city_id, dog_name, actual_address, dog_race, dog_gender, dog_age)
     VALUES (?,?,?,?,?,?,?)");
@@ -106,7 +116,8 @@ function selectValuesUser($username, $password)
     $selectQuery->bind_param(
         "ss",
         $username,
-        $password);
+        $password
+    );
 
     $selectQuery->execute();
 
@@ -114,15 +125,14 @@ function selectValuesUser($username, $password)
 
 
     $userresult = $selectQuery->get_result()->fetch_all(MYSQLI_ASSOC);
-        
-        
-        if(sizeof($userresult) > 0) {
 
-            //Index 0 is used since there should only be one entry
-            $_SESSION['loggedin']['userId'] = $userresult[0]['user_id'];
-            $_SESSION['loggedin']['user_username'] = $userresult[0]['user_username'];
 
-        }
+    if (sizeof($userresult) > 0) {
+
+        //Index 0 is used since there should only be one entry
+        $_SESSION['loggedin']['userId'] = $userresult[0]['user_id'];
+        $_SESSION['loggedin']['user_username'] = $userresult[0]['user_username'];
+    }
 
     // while ($selectQuery->fetch()) {
     //     $_SESSION['loggedin'] = array('user_id' => $user_id, 'user_username' => $username);

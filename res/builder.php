@@ -9,9 +9,9 @@ function build($page)
     <head>
         <title>Vermittlung vereint</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/style_mobile.css">
-        <link rel="stylesheet" href="./css/mybootstrap.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/style_mobile.css">
+        <link rel="stylesheet" type="text/css" href="./css/mybootstrap.css">
         <script src="./js/_mainscript.js"></script>
         <script src='./js/jquery-3.5.1.min.js'></script>
 
