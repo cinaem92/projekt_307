@@ -33,7 +33,7 @@
           
             <!--General User Informations-->
             <div class="labels">
-                <label>Dein Benutzername:</label>
+                <label>Dein Benutzername</label>
             </div>
             <div>
                 <input type="text" name="username" class="inputs" placeholder="" minlength="3" maxlength="20">

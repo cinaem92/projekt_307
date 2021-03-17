@@ -3,46 +3,56 @@
     <h2>Bewerbungsformular</h2>
     <h3>Möchten Sie sich mit %DogName% Kontakt aufnehmen?</h3>
     <p>Vervollständigen Sie die untenstehenden Angaben:</p>
-    <form action="mailto:info@vermittlungvereint.ch" method="post" enctype="text/plain">
+    <form action="mailto:info@vermittlungvereint.ch" method="post" onchange="validate()">
         <div class="grid-formular">
 
-            <!--General Informations-->
-            
-            <div class="labels">
+              <!--Vorname-->
+              <div class="labels">
                 <label>Vorname</label>
             </div>
             <div>
-                <input type="text" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="name" id="name" class="inputs" placeholder="" minlength="3">
             </div>
+            <!--Name-->
             <div class="labels">
                 <label>Name</label>
             </div>
             <div>
-                <input type="text" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="lastname" id="lastname" class="inputs" placeholder="" minlength="3">
             </div>
+            <!--Adresse-->
             <div class="labels">
                 <label>Adresse</label>
             </div>
             <div>
-                <input type="text" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="address" id="address" class="inputs" placeholder="" minlength="3">
             </div>
+            <!--PLZ / Ort-->
             <div class="labels">
-                <label>PLZ / Ort</label>
+                <label>PLZ</label>
             </div>
             <div>
-                <input type="text" class="inputs" placeholder="" minlength="3">
+                <input type="number" name="plz" id="plz" class="inputs">
             </div>
+            <div class="labels">
+                <label>Ort</label>
+            </div>
+            <div>
+                <input type="text" name="city" id="city" class="inputs" placeholder="" minlength="3">
+            </div>
+            <!--Telefonnummer-->
             <div class="labels">
                 <label>Telefonnummer</label>
             </div>
             <div>
-                <input type="text" class="inputs" placeholder="" minlength="3">
+                <input type="text" name="telephone" id="telephone" class="inputs" placeholder="" minlength="3">
             </div>
+            <!--E-Mail-->
             <div class="labels">
                 <label>E-Mail</label>
             </div>
             <div>
-                <input type="email" class="inputs" placeholder="" required>
+                <input type="email" name="email" id="email" class="inputs" placeholder="" required>
             </div>
             
 
