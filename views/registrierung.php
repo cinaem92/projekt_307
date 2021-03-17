@@ -53,7 +53,7 @@
                 <label>PLZ</label>
             </div>
             <div>
-                <input type="number" name="plz" id="plz" class="inputs" placeholder="" minlength="4" maxlength="4">
+                <input type="number" name="plz" id="plz" class="inputs">
             </div>
             <div class="labels">
                 <label>Ort</label>

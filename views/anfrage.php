@@ -10,7 +10,7 @@
                 <label>Betroffener Hund</label>
             </div>
             <div class="selects">
-                <select class="inputs" name="selectedDog" id="selectedDog" name="selectedDog">
+                <select class="inputs" name="selectedDog" id="selectedDog">
                     <option value="Wählen Sie einen Hund aus">Wählen Sie einen Hund aus</option>
                     <option value="Aiko">Aiko</option>
                     <option value="Bella">Bella</option>

@@ -54,5 +54,6 @@
             </div>
         </form>
     </div>
+</div>
 
-    <script src="./js/validatelogin.js"></script>
+<script src="./js/validatelogin.js"></script>
