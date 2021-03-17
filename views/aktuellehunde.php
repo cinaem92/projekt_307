@@ -8,7 +8,7 @@
         <div class="infotext">
             <p>Mischling Dackel x unbekannt</p>
             <p>Männlich kastriert</p>
-            <p>Alter: 20</p>
+            <p>Alter: 10</p>
             <p>Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
@@ -20,7 +20,7 @@
         <div class="infotext">
             <p>Mischling Berner Senn x unbekannt</p>
             <p>Männlich kastriert</p>
-            <p>Alter: 20</p>
+            <p>Alter: 6</p>
             <p>Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
@@ -32,7 +32,7 @@
         <div class="infotext">
             <p>Mischling Collie x unbekannt</p>
             <p>Männlich kastriert</p>
-            <p>Alter: 20</p>
+            <p>Alter: 5</p>
             <p>Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
@@ -44,7 +44,7 @@
         <div class="infotext">
             <p>Cavalier King Charles</p>
             <p>Männlich kastriert</p>
-            <p>Alter: 20</p>
+            <p>Alter: 2</p>
             <p>Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
@@ -56,7 +56,7 @@
         <div class="infotext">
             <p>Mischling Beagle x unbekannt</p>
             <p>Männlich kastriert</p>
-            <p>Alter: 20</p>
+            <p>Alter: 8</p>
             <p>Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>
@@ -68,7 +68,7 @@
         <div class="infotext">
             <p>Labrador</p>
             <p>Männlich kastriert</p>
-            <p>Alter: 20</p>
+            <p>Alter: 3</p>
             <p>Tierdoerfli</p>
             <p><a href="bewerbung">Bewirb dich für diesen Hund</a></p>
         </div>

@@ -18,8 +18,8 @@
     <p>Folgende Rubriken können wir Ihnen anbieten:
     </p>
     <div class="linkbox">
-        <a href="vermittlung.html">• Vermittlung</a><br>
-        <a href="aktuellehunde.html">• Aktuelle Hunde</a><br>
-        <a href="kontaktformular.html">• Kontakt</a>
+        <a href="vermittlung">• Vermittlung</a><br>
+        <a href="aktuellehunde">• Aktuelle Hunde</a><br>
+        <a href="anfrage">• Anfrage</a>
     </div>
 </div>

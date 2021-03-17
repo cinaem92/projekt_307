@@ -9,7 +9,7 @@
 
         <p>Besitzen Sie noch kein Login? Registrieren Sie sich</p>
 
-        <p><a href="registration">Jetzt registrieren</a></p>
+        <p><a href="registrierung">Jetzt registrieren</a></p>
 
         <p>Gibt es Schwierigkeiten mit Ihrem Login?</p>
 

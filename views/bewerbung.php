@@ -1,7 +1,7 @@
 <h1 id="header_h1">Hundevermittlung vereint</h1>
 <div class="fliesstext">
     <h2>Bewerbungsformular</h2>
-    <h3>Möchten Sie sich mit %DogName% Kontakt aufnehmen?</h3>
+    <!-- <h3>Möchten Sie sich mit %DogName% Kontakt aufnehmen?</h3> -->
     <p>Vervollständigen Sie die untenstehenden Angaben:</p>
     <form name="bewerbung" action="mailto:info@vermittlungvereint.ch" method="post" onchange="validate()">
         <div class="grid-formular">
@@ -58,17 +58,17 @@
 
             <!--Select-->
             <div class="labels">
-                <label>Wie bist du auf "vermittlung vereint" gestossen?</label>
+                <label>Wie bist du auf "Vermittlungshilfe vereint" gestossen?</label>
             </div>
 
             <div class="selects">
                 <select class="inputs" name="selected" id="selected">
                     <option value="1">-</option>
-                    <option value="1">Freunde</option>
-                    <option value="1">Verwandte</option>
-                    <option value="1">Internet</option>
-                    <option value="1">Tierheim/Tierschutz</option>
-                    <option value="1">Andere</option>
+                    <option value="Freunde">Freunde</option>
+                    <option value="Verwandte">Verwandte</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Tierheim">Tierheim/Tierschutz</option>
+                    <option value="Andere">Andere</option>
                 </select>
             </div>
             <!--Send-Button-->
